@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="topForm">
+      <div class="topMenu_logo"></div>
+      <nav class="topMenu_nav">
+        <ul class="topMenu_itemList">
+          <li class="topMenu_item"><a href="#">Информация</a></li>
+          <li class="topMenu_item"><a href="#">Блог</a></li>
+          <li class="topMenu_item"><a href="#">Отзывы</a></li>
+          <li class="topMenu_item"><a href="#">Конкурс</a></li>
+        </ul>
+      </nav>
+      <div class="topTextCompetition">Конкурс на самое безбашеное путешествие с Пинк</div>
+    </header>
+    <section class="regForm">
+      <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+      <form action="/" method="post">
+        <fieldset>
+          <div class="formInputGroup">
+            <label for="firstName">Имя: *</label>
+            <input id="firstName" type="text" class="formInputText" name="firstName" placeholder="Введите ваше имя">
+          </div>
+          <div class="formInputGroup">
+            <label for="lastName">Фамилия: *</label>
+            <input id="lastName" type="text" class="formInputText" name="lastName" placeholder="Укажите фамилию">
+          </div>
+          <div class="formInputGroup">
+            <label for="patronimName">Отчество:</label>
+            <input id="patronimName" type="text" class="formInputText" name="patronimName" placeholder="Ну и отчество тоже">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>С каким приложением путешествовали? *</legend>
+          <div class="formInputGroup">
+            <input id="appIOS" type="radio" class="formInputRadio" name="chooseApp" checked>
+            <label for="appIOS">Pink для iOS</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="appAndroid" type="radio" class="formInputRadio" name="chooseApp">
+            <label for="appAndroid">Pink на Android</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="appWinPhone" type="radio" class="formInputRadio" name="chooseApp">
+            <label for="appWinPhone">Windows Phone</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Когда вы путешествовали? *</legend>
+          <div class="formInputGroup">
+            <input id="tripDateStart" type="text" class="formInputText" name="tripDateStart" placeholder="1 апреля 2015">
+            <label for="tripDateStart">Дата выезда</label>
+          </div>
+          <div class="formInputGroup">
+            <button id="tripDuration_decr" class="inputRange_mod inputRange_decr">-</button><input id="tripDuration" type="text" class="formInputText" name="tripDuration" placeholder="10 дней"><button id="tripDuration_incr" class="inputRange_mod inputRange_incr">+</button>
+            <label for="tripDuration">Продолжительность</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="tripDateFinish" type="text" class="formInputText" name="tripDateFinish" placeholder="1 апреля 2015" disabled>
+            <label for="tripDateFinish">Дата Возвращения</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="formInputGroup">
+            <label for="accompNumber">Количество попутчиков *</label>
+            <button id="accompNumber_decr" class="inputRange_mod inputRange_decr">-</button><input id="accompNumber" type="text" class="formInputText" name="accompNumber" placeholder="2 чел" disabled><button id="accompNumber_incr" class="inputRange_mod inputRange_incr">+</button>
+          </div>
+          <div class="fieldsGroup" id="accompMembers_group">
+            <div id="accompMember_1" class="accompMember_set">
+              <div class="formInputGroup">
+                <label for="accompItemNum_1">№</label>
+                <input id="accompItemNum_1" type="number" class="formInputText" name="accompItemNum_1" placeholder="1" disabled>
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemName_1">Имя: *</label>
+                <input id="accompItemName_1" type="text" class="formInputText" name="accompItemName_1" placeholder="Введите имя">
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemNick_1">Прозвище:</label>
+                <input id="accompItemNick_1" type="text" class="formInputText" name="accompItemNick_1" placeholder="Ну как же без этого!">
+              </div>
+            </div>
+            <div id="accompMember_2" class="accompMember_set">
+              <div class="formInputGroup">
+                <label for="accompItemNum_2">№</label>
+                <input id="accompItemNum_2" type="number" class="formInputText" name="accompItemNum_2" placeholder="2" disabled>
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemName_2">Имя: *</label>
+                <input id="accompItemName_2" type="text" class="formInputText" name="accompItemName_2" placeholder="Введите имя">
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemNick_2">Прозвище:</label>
+                <input id="accompItemNick_2" type="text" class="formInputText" name="accompItemNick_2" placeholder="Ну как же без этого!">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Ваши безбашенные достижения в путешествии</legend>
+          <div class="formInputGroup">
+            <input id="achiev_1" type="checkbox" class="formInputCheckbox" name="achiev_1" checked>
+            <label for="achiev_1">Сделал селфи с акулой</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_2" type="checkbox" class="formInputCheckbox" name="achiev_2" checked>
+            <label for="achiev_2">Обгорел на пляже</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_3" type="checkbox" class="formInputCheckbox" name="achiev_3">
+            <label for="achiev_3">Видел Чака Норриса</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_4" type="checkbox" class="formInputCheckbox" name="achiev_4">
+            <label for="achiev_4">Накупил сувениров</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_5" type="checkbox" class="formInputCheckbox" name="achiev_5" checked>
+            <label for="achiev_5">Удержал башню</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_6" type="checkbox" class="formInputCheckbox" name="achiev_6">
+            <label for="achiev_6">Разгромил отель</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Ваши фотографии из поездки *</legend>
+          <input type="file" id="addPhoto_btn" class="formButton_add">
+          <div class="fieldsGroup" id="userPhotos_group">
+            <div class="userPhotoItem" id="userPhotoItem_001"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-1.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_002"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-2.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_003"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-3.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_004"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-4.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_005"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-5.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_006"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-6.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_007"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-7.jpg</span></div>
+            <div class="userPhotoItem" id="userPhotoItem_008"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-8.jpg</span></div>
+          </div>
+        </fieldset>
+        <input type="submit" class="formButton_submit" value="Отправить форму">
+        <p class="formText"><span>*</span> — обязательные поля</p>
+      </form>
+    </section>
+    <section id="regForm_ok" class="regForm_modal">
+      <h2>Ваша заявка отправлена</h2>
+      <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <a href="#" class="formButton_link">OK</a>
+    </section>
+    <section id="regForm_fail" class="regForm_modal">
+      <h2>Что-то пошло не так!</h2>
+      <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <a href="#" class="formButton_link">ЗАКРЫТЬ ОКНО</a>
+    </section>
+    <footer class="formFooter">
+      <a href="#"><img src="img/logoPink_glass.svg" width="145" height="40" alt="PINK logo"></a>
+      <div class="social">
+        <a href="#" class="socialBtn socialBtnTw">Twitter</a>
+        <a href="#" class="socialBtn socialBtnFb">Facebook</a>
+        <a href="#" class="socialBtn socialBtnYt">Youtube</a>
+      </div>
+      <a href="#">Разработано <img src="img/logoHTMLAcademy.svg" width="27" height="34" alt="HTML Academy logo"></a>
+    </footer>
+  </body>
+</html>
