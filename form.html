@@ -21,71 +21,115 @@
       <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
       <form action="/" method="post">
         <fieldset>
-          <label for="firstName">Имя: *</label>
-          <input id="firstName" type="text" class="formInputText" name="firstName" placeholder="Введите ваше имя">
-          <label for="lastName">Фамилия: *</label>
-          <input id="lastName" type="text" class="formInputText" name="lastName" placeholder="Укажите фамилию">
-          <label for="patronimName">Отчество:</label>
-          <input id="patronimName" type="text" class="formInputText" name="patronimName" placeholder="Ну и отчество тоже">
+          <div class="formInputGroup">
+            <label for="firstName">Имя: *</label>
+            <input id="firstName" type="text" class="formInputText" name="firstName" placeholder="Введите ваше имя">
+          </div>
+          <div class="formInputGroup">
+            <label for="lastName">Фамилия: *</label>
+            <input id="lastName" type="text" class="formInputText" name="lastName" placeholder="Укажите фамилию">
+          </div>
+          <div class="formInputGroup">
+            <label for="patronimName">Отчество:</label>
+            <input id="patronimName" type="text" class="formInputText" name="patronimName" placeholder="Ну и отчество тоже">
+          </div>
         </fieldset>
         <fieldset>
           <legend>С каким приложением путешествовали? *</legend>
-          <input id="appIOS" type="radio" class="formInputRadio" name="chooseApp" checked>
-          <label for="appIOS">Pink для iOS</label>
-          <input id="appAndroid" type="radio" class="formInputRadio" name="chooseApp">
-          <label for="appAndroid">Pink на Android</label>
-          <input id="appWinPhone" type="radio" class="formInputRadio" name="chooseApp">
-          <label for="appWinPhone">Windows Phone</label>
+          <div class="formInputGroup">
+            <input id="appIOS" type="radio" class="formInputRadio" name="chooseApp" checked>
+            <label for="appIOS">Pink для iOS</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="appAndroid" type="radio" class="formInputRadio" name="chooseApp">
+            <label for="appAndroid">Pink на Android</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="appWinPhone" type="radio" class="formInputRadio" name="chooseApp">
+            <label for="appWinPhone">Windows Phone</label>
+          </div>
         </fieldset>
         <fieldset>
           <legend>Когда вы путешествовали? *</legend>
-          <input id="tripDateStart" type="text" class="formInputText" name="tripDateStart" placeholder="1 апреля 2015">
-          <label for="tripDateStart">Дата выезда</label>
-          <button id="tripDuration_decr" class="inputRange_mod inputRange_decr">-</button><input id="tripDuration" type="text" class="formInputText" name="tripDuration" placeholder="10 дней"><button id="tripDuration_incr" class="inputRange_mod inputRange_incr">+</button>
-          <label for="tripDuration">Продолжительность</label>
-          <input id="tripDateFinish" type="text" class="formInputText" name="tripDateFinish" placeholder="1 апреля 2015" disabled>
-          <label for="tripDateFinish">Дата Возвращения</label>
+          <div class="formInputGroup">
+            <input id="tripDateStart" type="text" class="formInputText" name="tripDateStart" placeholder="1 апреля 2015">
+            <label for="tripDateStart">Дата выезда</label>
+          </div>
+          <div class="formInputGroup">
+            <button id="tripDuration_decr" class="inputRange_mod inputRange_decr">-</button><input id="tripDuration" type="text" class="formInputText" name="tripDuration" placeholder="10 дней"><button id="tripDuration_incr" class="inputRange_mod inputRange_incr">+</button>
+            <label for="tripDuration">Продолжительность</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="tripDateFinish" type="text" class="formInputText" name="tripDateFinish" placeholder="1 апреля 2015" disabled>
+            <label for="tripDateFinish">Дата Возвращения</label>
+          </div>
         </fieldset>
         <fieldset>
-          <label for="accompNumber">Количество попутчиков *</label>
-          <button id="accompNumber_decr" class="inputRange_mod inputRange_decr">-</button><input id="accompNumber" type="text" class="formInputText" name="accompNumber" placeholder="2 чел" disabled><button id="accompNumber_incr" class="inputRange_mod inputRange_incr">+</button>
+          <div class="formInputGroup">
+            <label for="accompNumber">Количество попутчиков *</label>
+            <button id="accompNumber_decr" class="inputRange_mod inputRange_decr">-</button><input id="accompNumber" type="text" class="formInputText" name="accompNumber" placeholder="2 чел" disabled><button id="accompNumber_incr" class="inputRange_mod inputRange_incr">+</button>
+          </div>
           <div class="fieldsGroup" id="accompMembers_group">
             <div id="accompMember_1" class="accompMember_set">
-              <label for="accompItemNum_1">№</label>
-              <input id="accompItemNum_1" type="text" class="formInputText" name="accompItemNum_1" placeholder="1" disabled>
-              <label for="accompItemName_1">Имя: *</label>
-              <input id="accompItemName_1" type="text" class="formInputText" name="accompItemName_1" placeholder="Введите имя">
-              <label for="accompItemNick_1">Прозвище:</label>
-              <input id="accompItemNick_1" type="text" class="formInputText" name="accompItemNick_1" placeholder="Ну как же без этого!">
+              <div class="formInputGroup">
+                <label for="accompItemNum_1">№</label>
+                <input id="accompItemNum_1" type="number" class="formInputText" name="accompItemNum_1" placeholder="1" disabled>
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemName_1">Имя: *</label>
+                <input id="accompItemName_1" type="text" class="formInputText" name="accompItemName_1" placeholder="Введите имя">
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemNick_1">Прозвище:</label>
+                <input id="accompItemNick_1" type="text" class="formInputText" name="accompItemNick_1" placeholder="Ну как же без этого!">
+              </div>
             </div>
             <div id="accompMember_2" class="accompMember_set">
-              <label for="accompItemNum_2">№</label>
-              <input id="accompItemNum_2" type="text" class="formInputText" name="accompItemNum_2" placeholder="2" disabled>
-              <label for="accompItemName_2">Имя: *</label>
-              <input id="accompItemName_2" type="text" class="formInputText" name="accompItemName_2" placeholder="Введите имя">
-              <label for="accompItemNick_2">Прозвище:</label>
-              <input id="accompItemNick_2" type="text" class="formInputText" name="accompItemNick_2" placeholder="Ну как же без этого!">
+              <div class="formInputGroup">
+                <label for="accompItemNum_2">№</label>
+                <input id="accompItemNum_2" type="number" class="formInputText" name="accompItemNum_2" placeholder="2" disabled>
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemName_2">Имя: *</label>
+                <input id="accompItemName_2" type="text" class="formInputText" name="accompItemName_2" placeholder="Введите имя">
+              </div>
+              <div class="formInputGroup">
+                <label for="accompItemNick_2">Прозвище:</label>
+                <input id="accompItemNick_2" type="text" class="formInputText" name="accompItemNick_2" placeholder="Ну как же без этого!">
+              </div>
             </div>
           </div>
         </fieldset>
         <fieldset>
           <legend>Ваши безбашенные достижения в путешествии</legend>
-          <input id="achiev_1" type="checkbox" class="formInputCheckbox" name="achiev_1" checked>
-          <label for="achiev_1">Сделал селфи с акулой</label>
-          <input id="achiev_2" type="checkbox" class="formInputCheckbox" name="achiev_2" checked>
-          <label for="achiev_2">Обгорел на пляже</label>
-          <input id="achiev_3" type="checkbox" class="formInputCheckbox" name="achiev_3">
-          <label for="achiev_3">Видел Чака Норриса</label>
-          <input id="achiev_4" type="checkbox" class="formInputCheckbox" name="achiev_4">
-          <label for="achiev_4">Накупил сувениров</label>
-          <input id="achiev_5" type="checkbox" class="formInputCheckbox" name="achiev_5" checked>
-          <label for="achiev_5">Удержал башню</label>
-          <input id="achiev_6" type="checkbox" class="formInputCheckbox" name="achiev_6">
-          <label for="achiev_6">Разгромил отель</label>
+          <div class="formInputGroup">
+            <input id="achiev_1" type="checkbox" class="formInputCheckbox" name="achiev_1" checked>
+            <label for="achiev_1">Сделал селфи с акулой</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_2" type="checkbox" class="formInputCheckbox" name="achiev_2" checked>
+            <label for="achiev_2">Обгорел на пляже</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_3" type="checkbox" class="formInputCheckbox" name="achiev_3">
+            <label for="achiev_3">Видел Чака Норриса</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_4" type="checkbox" class="formInputCheckbox" name="achiev_4">
+            <label for="achiev_4">Накупил сувениров</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_5" type="checkbox" class="formInputCheckbox" name="achiev_5" checked>
+            <label for="achiev_5">Удержал башню</label>
+          </div>
+          <div class="formInputGroup">
+            <input id="achiev_6" type="checkbox" class="formInputCheckbox" name="achiev_6">
+            <label for="achiev_6">Разгромил отель</label>
+          </div>
         </fieldset>
         <fieldset>
           <legend>Ваши фотографии из поездки *</legend>
-          <a href="#" id="addPhoto_btn" class="formButton_add">ЗАГРУЗИТЬ ФОТО</a>
+          <input type="file" id="addPhoto_btn" class="formButton_add">
           <div class="fieldsGroup" id="userPhotos_group">
             <div class="userPhotoItem" id="userPhotoItem_001"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-1.jpg</span></div>
             <div class="userPhotoItem" id="userPhotoItem_002"><img src="img/TEMP_userPhoto.jpg" alt=""><span>IMG-2.jpg</span></div>
