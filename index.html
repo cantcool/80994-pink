@@ -5,101 +5,124 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="topMenu">
-      <div class="topMenu_logo"></div>
-      <nav class="topMenu_nav">
-        <ul class="topMenu_itemList">
-          <li class="topMenu_item"><a href="#">Информация</a></li>
-          <li class="topMenu_item"><a href="#">Блог</a></li>
-          <li class="topMenu_item"><a href="#">Отзывы</a></li>
-          <li class="topMenu_item"><a href="#">Конкурс</a></li>
+    <header class="header header--main">
+      <div class="header__logo-wrap">
+        <div class="logo logo--small"></div>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a class="navigation__link" href="#">Информация</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Блог</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Отзывы</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Конкурс</a></li>
         </ul>
       </nav>
-      <div class="topTextIndex">Взгляните на жизнь иначе!</div>
+      <div class="header__slogan">Взгляните на жизнь иначе!</div>
+      <div class="header__img-hand">
+        <img src="img/header_hand.png" width="320" height="313" alt="">
+      </div>
     </header>
-    <section class="applications">
-      <a href="" class="applicationsDownload">Скачать приложение</a>
-      <a href="" class="applicationsBtn applicationsBtnApple"><img src="svg/logo_apple.svg" width="45" height="56" alt="iOS"></a>
-      <a href="" class="applicationsBtn applicationsBtnAndroid"><img src="svg/logo_android.svg" width="41" height="46" alt="Android"></a>
-      <a href="" class="applicationsBtn applicationsBtnMicrosoft"><img src="svg/logo_microsoft.svg" width="44" height="41" alt="WindowsPhone"></a>
-      <div class="applicationsText">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
-    </section>
-    <section class="information">
-      <div class="informationHeading">
-        <h2 class="informationHeader">Устали от серости мегаполиса?</h2>
-        <h2 class="informationHeader">Нам есть, что вам предложить!</h2>
+
+    <div class="applications">
+      <a class="applications__btn" href="#">Скачать приложение</a>
+      <a class="applications__app-logo  applications__app-logo--apple"><img src="svg/logo_apple.svg" width="45" height="56" alt="iOS"></a>
+      <a class="applications__app-logo  applications__app-logo--android"><img src="svg/logo_android.svg" width="41" height="46" alt="Android"></a>
+      <a class="applications__app-logo  applications__app-logo--winphone"><img src="svg/logo_microsoft.svg" width="44" height="41" alt="WindowsPhone"></a>
+      <div class="applications__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+    </div>
+
+    <div class="reasons">
+      <div class="reasons__title">
+        <h2>Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
       </div>
-      <h3 class="informationHeader">Поднимает настроение</h3>
-      <p class="informationText">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-      <h3 class="informationHeader">Меняет мир вокруг</h3>
-      <p class="informationText">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      <h3 class="informationHeader">Заводит новых друзей</h3>
-      <p class="informationText">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      <img src="img/iphone_screen.jpg" class="informationImg" width="157" height="230" alt="">
-    </section>
-    <section class="review">
-      <div class="reviewSlider">
-        <div class="reviewSlider_controls">
-          <input type="radio" id="reviewSlider_radio1" name="reviewSlider_toggle" checked>
-          <input type="radio" id="reviewSlider_radio2" name="reviewSlider_toggle">
-          <input type="radio" id="reviewSlider_radio3" name="reviewSlider_toggle">
+      <div class="reasons__wrap">
+        <div class="reasons__block">
+          <h3>Поднимает настроение</h3>
+          <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
         </div>
-        <div class="reviewSlider_slide reviewSlider_active">
-          <div class="reviewSliderHeader">Николай Петров</div>
-          <div class="reviewSliderText">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+        <div class="reasons__block">
+          <h3>Меняет мир вокруг</h3>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </div>
-        <div class="reviewSlider_slide reviewSlider_active">
-          <div class="reviewSliderHeader">Николай Петров</div>
-          <div class="reviewSliderText">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
-        </div>
-        <div class="reviewSlider_slide reviewSlider_active">
-          <div class="reviewSliderHeader">Николай Петров</div>
-          <div class="reviewSliderText">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+        <div class="reasons__block">
+          <h3>Заводит новых друзей</h3>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
-    </section>
-    <section class="price">
-      <div class="priceSlider">
-        <div class="priceSlider_controls">
-          <input type="radio" id="priceSlider_radio1" name="priceSlider_toggle">
-          <input type="radio" id="priceSlider_radio2" name="priceSlider_toggle" checked>
-          <input type="radio" id="priceSlider_radio3" name="priceSlider_toggle">
+      <img class="reasons__banner" src="img/iphone_screen.jpg" width="157" height="320" alt="">
+    </div>
+
+    <div class="review">
+      <div class="review__slider">
+        <div class="pagination">
+          <input class="pagination__selector  pagination__selector--active" type="radio" id="reviewSlider_radio1" name="reviewSlider_toggle" checked>
+          <input class="pagination__selector" type="radio" id="reviewSlider_radio2" name="reviewSlider_toggle">
+          <input class="pagination__selector" type="radio" id="reviewSlider_radio3" name="reviewSlider_toggle">
         </div>
-        <div class="priceSliderContent">
-          <table class="priceTable">
+        <div class="review__content">
+          <div class="slider__block  slider__block--active">
+            <div class="slider__header">Николай Петров</div>
+            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+          </div>
+          <div class="slider__block  slider__block--passive">
+            <div class="slider__header">Николай Петров</div>
+            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+          </div>
+          <div class="slider__block  slider__block--passive">
+            <div class="slider__header">Николай Петров</div>
+            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price">
+      <div class="price__slider">
+        <div class="pagination">
+          <input class="pagination__selector" type="radio" id="priceSlider_radio1" name="priceSlider_toggle">
+          <input class="pagination__selector  pagination__selector--active" type="radio" id="priceSlider_radio2" name="priceSlider_toggle" checked>
+          <input class="pagination__selector" type="radio" id="priceSlider_radio3" name="priceSlider_toggle">
+        </div>
+        <div class="price__content">
+          <table class="price-table">
             <tr>
-              <th>База<span class="priceUSD">1,99 USD</span></th>
-              <th class="priceHit">Стандарт<span class="priceUSD">3,99 USD</span></th>
-              <th>Анлим<span class="priceUSD">9,99 USD</span></th>
+              <th class="price-table__header">База <span class="price-table__price">1,99 USD</span></th>
+              <th class="price-table__header price-table__header--highlighted">Стандарт <span class="price-table__price">3,99 USD</span></th>
+              <th class="price-table__header">Анлим <span class="price-table__price">9,99 USD</span></th>
             </tr>
             <tr>
-              <td>Розовый фильтр<span class="checkYes"></span></td>
-              <td>Розовый фильтр<span class="checkYes"></span></td>
-              <td>Розовый фильтр<span class="checkYes"></span></td>
+              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
             </tr>
             <tr>
-              <td>Смайлики<span class="checkNo"></span></td>
-              <td>Смайлики<span class="checkYes"></span></td>
-              <td>Смайлики<span class="checkYes"></span></td>
+              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
             </tr>
             <tr>
-              <td>Комментарии<span class="checkNo"></span></td>
-              <td>Комментарии<span class="checkNo"></span></td>
-              <td>Комментарии<span class="checkYes"></span></td>
+              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
             </tr>
           </table>
         </div>
       </div>
-    </section>
-    <section class="contacts">
-      <p>Остались вопросы?<br>Свяжитесь с нами!</p>
-      <h4 class="contactsHeader">Звоните:</h4>
-      <p class="contactsField">+7 (812) 555-66-66</p>
-      <h4 class="contactsHeader">Пишите:</h4>
-      <p class="contactsField"><a href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
-      <h4 class="contactsHeader">Приезжайте в гости:</h4>
-      <p class="contactsField">ул. Большая Конюшенная, 19/8</p>
-      <div class="main-map" id="yandexmap"> </div>
-    </section>
+    </div>
+
+    <footer class="footer footer--main">
+      <div class="footer__contacts">
+        <div class="contacts">
+          <p class="contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</p>
+          <h4 class="contacts__cta">Звоните:</h4>
+          <p class="contacts__value contacts__value--phone">+7 (812) 555-66-66</p>
+          <h4 class="contacts__cta">Пишите:</h4>
+          <p class="contacts__value contacts__value--email"><a href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
+          <h4 class="contacts__cta">Приезжайте в гости:</h4>
+          <p class="contacts__value contacts__value--address">ул. Большая Конюшенная, 19/8</p>
+        </div>
+      </div>
+      <div class="footer__map" id="yandexmap"> </div>
+    </footer>
   </body>
 </html>
