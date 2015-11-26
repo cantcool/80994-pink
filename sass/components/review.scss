@@ -1,0 +1,37 @@
+.review {
+  display: block;
+  padding: 22px 0;
+  margin-bottom: 24px;
+  width: min-width-xs;
+  overflow: hidden;
+  font-size: 0;
+  text-align: center;
+
+  &__slider-content {
+    width: 960px;
+  }
+
+  &__slider-controls {
+    padding: 24px;
+  }
+
+  &__block {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0px 22px;
+    width: 320px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}

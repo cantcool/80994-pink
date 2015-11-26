@@ -1,0 +1,19 @@
+.footer {
+  background-color: #fff;
+  text-align: center;
+
+  &__contacts {
+    padding: 25px 20px;
+  }
+
+  &__map {
+    display: block;
+    height: 205px;
+    min-width: min-width-xs;
+    background: #eae6dd;
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 200;
+  }
+}

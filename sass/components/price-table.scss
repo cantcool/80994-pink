@@ -1,0 +1,65 @@
+.price-table {
+  display: table;
+  background: #fff;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+
+  &__header {
+    display: table-cell;
+    border: 2px solid #e5e5e5;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background-color: #283645;
+    height: 98px;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &__header--highlighted {
+    background-image: url("../img/price_hit.png");
+    background-repeat: no-repeat;
+    background-position: 0 -1px;
+  }
+
+  &__price {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 4px;
+  }
+
+  td {
+    display: table-cell;
+    border: 2px solid #e5e5e5;
+    padding: 18px 22px;
+    width: 280px;
+    text-align: left;
+  }
+
+  &__slider-controls {
+    padding: 24px;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    float: right;
+    font-size: 0;
+  }
+
+  &__checkbox:after {
+    float: right;
+    content: '';
+  }
+
+  &__checkbox--yes:after {
+    width: 29px;
+    height: 22px;
+    background: url("../img/checked_yes.png") no-repeat;
+  }
+
+  &__checkbox--no:after {
+    width: 26px;
+    height: 26px;
+    background: url("../img/checked_no.png") no-repeat;
+  }
+}
