@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link style="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="TEMP_overlayPixelPerfect"></div>
     <header class="header header--main">
-      <div class="header__logo-wrap">
-        <div class="logo logo--small"></div>
+      <div class="header__wrap">
+        <div class="logo logo--header"><a href="index.html"><img src="img/logoPink_text.png" width="74" height="23" alt="PINK logo"></a></div>
+        <div class="header__hamburger  header__hamburger--open" id="hamburger_open"></div>
+        <div class="header__hamburger  header__hamburger--close" id="hamburger_close"></div>
       </div>
+
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a class="navigation__link" href="#">Информация</a></li>
@@ -23,17 +29,20 @@
       </div>
     </header>
 
-    <div class="applications">
-      <a class="applications__btn" href="#">Скачать приложение</a>
-      <a class="applications__app-logo  applications__app-logo--apple"><img src="svg/logo_apple.svg" width="45" height="56" alt="iOS"></a>
-      <a class="applications__app-logo  applications__app-logo--android"><img src="svg/logo_android.svg" width="41" height="46" alt="Android"></a>
-      <a class="applications__app-logo  applications__app-logo--winphone"><img src="svg/logo_microsoft.svg" width="44" height="41" alt="WindowsPhone"></a>
-      <div class="applications__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+    <div class="application">
+      <a class="application__btn" href="#">Скачать приложение</a>
+      <div class="application__logotypes-wrap">
+        <a class="application__app-logo  applications__app-logo--apple" href="#"><img src="img/logo_apple.svg" width="45" height="56" alt="iOS"></a>
+        <a class="application__app-logo  applications__app-logo--android" href="#"><img src="img/logo_android.svg" width="41" height="46" alt="Android"></a>
+        <a class="application__app-logo  applications__app-logo--winphone" href="#"><img src="img/logo_microsoft.svg" width="44" height="41" alt="WindowsPhone"></a>
+      </div>
+      <div class="application__text">Доступно для <a href="#">iPhone</a>, <a href="#">iPad</a>, <a href="#">Android</a>, <a href="#">Windows Phone</a>, <a href="#">OS X</a>, <a href="#">Windows 8</a></div>
     </div>
 
     <div class="reasons">
       <div class="reasons__title">
-        <h2>Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
+        <h2>Устали от серости мегаполиса?</h2>
+        <h2>Нам есть, что вам предложить!</h2>
       </div>
       <div class="reasons__wrap">
         <div class="reasons__block">
@@ -49,63 +58,65 @@
           <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
-      <img class="reasons__banner" src="img/iphone_screen.jpg" width="157" height="320" alt="">
+      <div class="reasons__banner">
+        <img src="img/iphone_screen.jpg" width="157" height="320" alt="">
+      </div>
     </div>
 
     <div class="review">
-      <div class="review__slider">
-        <div class="pagination">
-          <input class="pagination__selector  pagination__selector--active" type="radio" id="reviewSlider_radio1" name="reviewSlider_toggle" checked>
-          <input class="pagination__selector" type="radio" id="reviewSlider_radio2" name="reviewSlider_toggle">
-          <input class="pagination__selector" type="radio" id="reviewSlider_radio3" name="reviewSlider_toggle">
+      <div class="review__slider-content">
+        <div class="review__block">
+          <h4>Николай Петров</h4>
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
-        <div class="review__content">
-          <div class="slider__block  slider__block--active">
-            <div class="slider__header">Николай Петров</div>
-            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
-          </div>
-          <div class="slider__block  slider__block--passive">
-            <div class="slider__header">Николай Петров</div>
-            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
-          </div>
-          <div class="slider__block  slider__block--passive">
-            <div class="slider__header">Николай Петров</div>
-            <div class="slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
-          </div>
+        <div class="review__block">
+          <h4>Николай Петров</h4>
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="review__block">
+          <h4>Николай Петров</h4>
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+      </div>
+      <div class="review__slider-controls">
+        <div class="pagination">
+          <input class="pagination__selector  pagination__selector--active" type="radio" id="reviewSlider_radio1" name="reviewSlider_toggle" checked><label for="reviewSlider_radio1"></label>
+          <input class="pagination__selector" type="radio" id="reviewSlider_radio2" name="reviewSlider_toggle"><label for="reviewSlider_radio2"></label>
+          <input class="pagination__selector" type="radio" id="reviewSlider_radio3" name="reviewSlider_toggle"><label for="reviewSlider_radio3"></label>
         </div>
       </div>
     </div>
 
     <div class="price">
-      <div class="price__slider">
+      <div class="price__slider-content">
+        <table class="price-table">
+          <tr>
+            <th class="price-table__header">База <span class="price-table__price">1,99 USD</span></th>
+            <th class="price-table__header price-table__header--highlighted">Стандарт <span class="price-table__price">3,99 USD</span></th>
+            <th class="price-table__header">Анлим <span class="price-table__price">9,99 USD</span></th>
+          </tr>
+          <tr>
+            <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+            <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+            <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+          </tr>
+          <tr>
+            <td>Смайлики <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+            <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+            <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+          </tr>
+          <tr>
+            <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+            <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
+            <td>Комментарии <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="price__slider-conrols">
         <div class="pagination">
-          <input class="pagination__selector" type="radio" id="priceSlider_radio1" name="priceSlider_toggle">
-          <input class="pagination__selector  pagination__selector--active" type="radio" id="priceSlider_radio2" name="priceSlider_toggle" checked>
-          <input class="pagination__selector" type="radio" id="priceSlider_radio3" name="priceSlider_toggle">
-        </div>
-        <div class="price__content">
-          <table class="price-table">
-            <tr>
-              <th class="price-table__header">База <span class="price-table__price">1,99 USD</span></th>
-              <th class="price-table__header price-table__header--highlighted">Стандарт <span class="price-table__price">3,99 USD</span></th>
-              <th class="price-table__header">Анлим <span class="price-table__price">9,99 USD</span></th>
-            </tr>
-            <tr>
-              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-              <td>Розовый фильтр <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-            </tr>
-            <tr>
-              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
-              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-              <td>Смайлики <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-            </tr>
-            <tr>
-              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
-              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--no">NO</span></td>
-              <td>Комментарии <span class="price-table__checkbox price-table__checkbox--yes">YES</span></td>
-            </tr>
-          </table>
+          <input class="pagination__selector" type="radio" id="priceSlider_radio1" name="priceSlider_toggle"><label for="priceSlider_radio1"></label>
+          <input class="pagination__selector  pagination__selector--active" type="radio" id="priceSlider_radio2" name="priceSlider_toggle" checked><label for="priceSlider_radio2"></label>
+          <input class="pagination__selector" type="radio" id="priceSlider_radio3" name="priceSlider_toggle"><label for="priceSlider_radio3"></label>
         </div>
       </div>
     </div>
@@ -122,7 +133,12 @@
           <p class="contacts__value contacts__value--address">ул. Большая Конюшенная, 19/8</p>
         </div>
       </div>
-      <div class="footer__map" id="yandexmap"> </div>
+      <div class="footer__map" id="yandexmap"></div>
     </footer>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Vp6zgLv7xRp8iO_2w5OEhHTRxaB2PTgS&width=320&height=240&lang=ru_RU&sourceType=constructor&amp;id=yandexmap"></script>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
   </body>
 </html>
