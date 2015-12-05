@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link style="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo-wrap">
-        <div class="logo logo--small"></div>
+    <div class="TEMP_overlayPixelPerfect"></div>
+    <header class="header header--main">
+      <div class="header__wrap">
+        <div class="logo logo--header"><a href="index.html"><img src="img/logoPink_text.png" width="74" height="23" alt="PINK logo"></a></div>
+        <div class="header__hamburger  header__hamburger--open" id="hamburger_open"></div>
+        <div class="header__hamburger  header__hamburger--close" id="hamburger_close"></div>
       </div>
+
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a class="navigation__link" href="#">Информация</a></li>
@@ -24,118 +30,114 @@
       <h2 class="regform__heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
       <form action="/" method="post">
         <fieldset class="regform__fieldset">
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <label class="regform__label" for="firstName">Имя: *</label>
             <input class="regform__input  regform__input--text" id="firstName" type="text" name="firstName" placeholder="Введите ваше имя" required>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <label class="regform__label" for="lastName">Фамилия: *</label>
             <input class="regform__input  regform__input--text" id="lastName" type="text" name="lastName" placeholder="Укажите фамилию" required>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <label class="regform__label" for="patronimName">Отчество:</label>
             <input class="regform__input  regform__input--text" id="patronimName" type="text" name="patronimName" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
-        <fieldset class="regform__fieldset">
-          <legend class="regform__legend">С каким приложением путешествовали? *</legend>
-          <div class="regform__field-group">
+        <fieldset class="regform__fieldset  regform__fieldset--application">
+          <div class="regform__header">С каким приложением путешествовали? *</div>
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--radio" id="appIOS" type="radio" name="chooseApp" checked>
             <label class="regform__label  regform__label--list" for="appIOS">Pink для iOS</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--radio" id="appAndroid" type="radio" name="chooseApp">
             <label class="regform__label  regform__label--list" for="appAndroid">Pink на Android</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--radio" id="appWinPhone" type="radio" name="chooseApp">
             <label class="regform__label  regform__label--list" for="appWinPhone">Windows Phone</label>
           </div>
         </fieldset>
-        <fieldset class="regform__fieldset">
-          <legend class="regform__legend">Когда вы путешествовали? *</legend>
-          <div class="regform__field-group">
-            <input class="regform__input  regform__input--date" id="tripDateStart" type="text" name="tripDateStart" placeholder="1 апреля 2015" required>
-            <label class="regform__label" for="tripDateStart">Дата выезда</label>
+        <fieldset class="regform__fieldset  regform__fieldset--when">
+          <div class="regform__header  regform__header--when">Когда вы путешествовали? *</div>
+          <div class="regform__input-group">
+            <input class="regform__input  regform__input--text" id="tripDateStart" type="text" name="tripDateStart" placeholder="1 апреля 2015" required>
+            <label class="regform__label  regform__label--centered" for="tripDateStart">Дата выезда</label>
           </div>
-          <div class="regform__field-group">
-            <button class="regform__btn-range regform__btn-range--decr" id="tripDuration_decr">-</button>
-            <input class="regform__input-range" id="tripDuration" type="text" name="tripDuration" placeholder="10 дней">
+          <div class="regform__input-group">
+            <button class="regform__btn-range regform__btn-range--decr" id="tripDuration_decr">–</button>
+            <input class="regform__input regform__input--range" id="tripDuration" type="text" name="tripDuration" placeholder="10 дней" readonly>
             <button class="regform__btn-range regform__btn-range--incr" id="tripDuration_incr">+</button>
-            <label class="regform__label" for="tripDuration">Продолжительность</label>
+            <label class="regform__label  regform__label--centered" for="tripDuration">Продолжительность</label>
           </div>
-          <div class="regform__field-group">
-            <input class="regform__input  regform__input--date" id="tripDateFinish" type="text" name="tripDateFinish" placeholder="1 апреля 2015" disabled>
-            <label class="regform__label" for="tripDateFinish">Дата Возвращения</label>
+          <div class="regform__input-group">
+            <input class="regform__input  regform__input--text" id="tripDateFinish" type="text" name="tripDateFinish" placeholder="1 апреля 2015" disabled>
+            <label class="regform__label  regform__label--centered" for="tripDateFinish">Дата Возвращения</label>
           </div>
         </fieldset>
         <fieldset class="regform__fieldset">
-          <div class="regform__field-group">
-            <label class="regform__label" for="accompNumber">Количество попутчиков *</label>
-            <button class="regform__btn-range regform__btn-range--decr" id="accompNumber_decr">-</button>
-            <input class="regform__input-range" id="accompNumber" type="text" name="accompNumber" placeholder="2 чел" disabled>
+          <div class="regform__header  regform__header--quantity">Количество попутчиков *</div>
+          <div class="regform__input-group">
+            <button class="regform__btn-range regform__btn-range--decr" id="accompNumber_decr">–</button>
+            <input class="regform__input  regform__input--range" id="accompNumber" type="text" name="accompNumber" placeholder="2 чел" disabled>
             <button class="regform__btn-range regform__btn-range--incr" id="accompNumber_incr">+</button>
           </div>
-          <div class="regform__field-group--divided" id="accompMembers_group">
+          <div class="regform__input-group--divided" id="accompMembers_group">
             <div id="accompMember_1">
-              <div class="regform__field-group">
-                <label class="regform__label" for="accompItemNum_1">№</label>
-                <input class="regform__input  regform__input--left" id="accompItemNum_1" type="number" name="accompItemNum_1" placeholder="1" disabled>
+              <label class="regform__label  regform__label--oneline" for="accompItemNum_1">№</label>
+              <label class="regform__label  regform__label--oneline" for="accompItemName_1">Имя: *</label>
+              <div class="regform__input-group  regform__input-group--person">
+                <input class="regform__input  regform__input--person-num" id="accompItemNum_1" type="number" name="accompItemNum_1" placeholder="1" disabled>
+                <input class="regform__input  regform__input--person-name" id="accompItemName_1" type="text" name="accompItemName_1" placeholder="Введите имя" required>
               </div>
-              <div class="regform__field-group">
-                <label class="regform__label" for="accompItemName_1">Имя: *</label>
-                <input class="regform__input  regform__input--right" id="accompItemName_1" type="text" name="accompItemName_1" placeholder="Введите имя" required>
-              </div>
-              <div class="regform__field-group">
+              <div class="regform__input-group  regform__input-group--nick">
                 <label class="regform__label" for="accompItemNick_1">Прозвище:</label>
                 <input class="regform__input  regform__input--text" id="accompItemNick_1" type="text" name="accompItemNick_1" placeholder="Ну как же без этого!">
               </div>
             </div>
-            <div id="accompMember_2" class="accompMember_set">
-              <div class="regform__field-group">
-                <label class="regform__label" for="accompItemNum_2">№</label>
-                <input class="regform__input  regform__input--left" id="accompItemNum_2" type="number" name="accompItemNum_2" placeholder="2" disabled>
+            <div id="accompMember_2">
+              <label class="regform__label  regform__label--oneline" for="accompItemNum_2">№</label>
+              <label class="regform__label  regform__label--oneline" for="accompItemName_2">Имя: *</label>
+              <div class="regform__input-group  regform__input-group--person">
+                <input class="regform__input  regform__input--person-num" id="accompItemNum_2" type="number" name="accompItemNum_2" placeholder="2" disabled>
+                <input class="regform__input  regform__input--person-name" id="accompItemName_2" type="text" name="accompItemName_1" placeholder="Введите имя" required>
               </div>
-              <div class="regform__field-group">
-                <label class="regform__label" for="accompItemName_2">Имя: *</label>
-                <input class="regform__input  regform__input--right" id="accompItemName_2" type="text" name="accompItemName_2" placeholder="Введите имя" required>
-              </div>
-              <div class="regform__field-group">
+              <div class="regform__input-group  regform__input-group--nick">
                 <label class="regform__label" for="accompItemNick_2">Прозвище:</label>
                 <input class="regform__input  regform__input--text" id="accompItemNick_2" type="text" name="accompItemNick_2" placeholder="Ну как же без этого!">
               </div>
             </div>
           </div>
         </fieldset>
-        <fieldset class="regform__fieldset">
-          <legend class="regform__legend">Ваши безбашенные достижения в путешествии</legend>
-          <div class="regform__field-group">
+        <fieldset class="regform__fieldset regform__fieldset--achievments">
+          <div class="regform__header">Ваши безбашенные достижения в путешествии</div>
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_1" type="checkbox" name="achiev_1" checked>
             <label class="regform__label  regform__label--list" for="achiev_1">Сделал селфи с акулой</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_2" type="checkbox" name="achiev_2" checked>
             <label class="regform__label  regform__label--list" for="achiev_2">Обгорел на пляже</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_3" type="checkbox" name="achiev_3">
             <label class="regform__label  regform__label--list" for="achiev_3">Видел Чака Норриса</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_4" type="checkbox" name="achiev_4">
             <label class="regform__label  regform__label--list" for="achiev_4">Накупил сувениров</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_5" type="checkbox" name="achiev_5" checked>
             <label class="regform__label  regform__label--list" for="achiev_5">Удержал башню</label>
           </div>
-          <div class="regform__field-group">
+          <div class="regform__input-group">
             <input class="regform__input  regform__input--checkbox" id="achiev_6" type="checkbox" name="achiev_6">
             <label class="regform__label  regform__label--list" for="achiev_6">Разгромил отель</label>
           </div>
         </fieldset>
         <fieldset class="regform__fieldset">
-          <legend class="regform__legend">Ваши фотографии из поездки *</legend>
+          <div class="regform__header">Ваши фотографии из поездки *</div>
           <input class="regform__input  regform__input--btn" type="file" id="addPhoto_btn">
           <div class="regform__photos" id="userPhotos_group">
             <div class="photo__item" id="userPhotoItem_001"><img class="photo__img" src="img/TEMP_userPhoto.jpg" width="67" height="67" alt=""><span>IMG-1.jpg</span></div>
@@ -167,16 +169,21 @@
 
     <footer class="footer footer--form">
       <div class="footer__logo">
-        <a href="#"><img class="logo logo--glass" src="img/logoPink_glass.svg" width="145" height="40" alt="PINK logo"></a>
+        <a href="#"><img class="logo logo--glass" src="img/logoPink_glass.png" width="145" height="40" alt="PINK logo"></a>
       </div>
       <div class="footer__social">
-        <a class="social-btn social-btn--twitter" href="#" >Twitter</a>
-        <a class="social-btn social-btn--facebook" href="#" >Facebook</a>
-        <a class="social-btn social-btn--youtube" href="#" >Youtube</a>
+        <a class="social-btn social-btn--twitter" href="#" ><i class="icon-twitter-bird"></i></a>
+        <a class="social-btn social-btn--facebook" href="#" ><i class="icon-facebook"></i></a>
+        <a class="social-btn social-btn--youtube" href="#" ><i class="icon-play"></i></a>
       </div>
       <div class="footer__htmlacademy">
-        <a href="#">Разработано <img src="img/logoHTMLAcademy.svg" width="27" height="34" alt="HTML Academy logo"></a>
+        <a href="#">Разработано <img src="img/logo_htmlacademy.svg" width="27" height="34" alt="HTML Academy logo"></a>
       </div>
     </footer>
+
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
   </body>
 </html>

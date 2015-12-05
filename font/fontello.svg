@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="ok" unicode="&#xe800;" d="m0 339q0-35 24-60l246-239q24-25 60-25 36 0 60 25l505 495q25 24 25 59t-25 58q-25 25-60 25t-60-25l-445-435-185 181q-25 24-60 24t-61-24q-24-24-24-59z" horiz-adv-x="920.4" />
+<glyph glyph-name="twitter-bird" unicode="&#xe801;" d="m1231 732q-51-77-126-131 1-14 1-32 0-102-30-203-29-102-90-195-61-92-145-164-84-72-201-114-118-43-253-43-210 0-387 113 31-3 60-3 176 0 314 108-82 2-147 51-64 49-89 125 24-5 48-5 34 0 66 9-87 17-145 87-57 69-57 160l0 4q53-30 114-32-52 34-82 90-30 55-30 120 0 68 34 127 95-117 230-186 135-70 290-78-6 28-6 58 0 104 74 178 74 74 178 74 110 0 185-80 85 17 160 62-29-91-111-140 76 9 145 39z" horiz-adv-x="1231" />
+<glyph glyph-name="facebook" unicode="&#xe802;" d="m535 843v-147h-87q-48 0-65-20t-17-60v-106h164l-22-165h-142v-424h-171v424h-142v165h142v122q0 104 58 161t155 57q82 0 127-7z" horiz-adv-x="571.4" />
+<glyph glyph-name="play" unicode="&#xe803;" d="m0 11v677q0 39 22 52t53-8l564-349q20-14 20-33 0-9-5-18t-10-12l-5-4-564-349q-31-20-53-7t-22 51z" horiz-adv-x="658.7" />
+<glyph glyph-name="cancel" unicode="&#xe804;" d="m0 90q0 36 26 62l195 195-195 196q-26 25-26 61t26 61 61 25 61-25l196-196 195 196q25 25 61 25t61-25 25-61-25-61l-195-196 195-195q25-26 25-62t-25-61q-25-25-61-25t-61 25l-195 195-196-195q-25-25-61-25t-61 25q-26 26-26 61z" horiz-adv-x="686.5" />
+<glyph glyph-name="minus" unicode="&#xe805;" d="m18 239l0 223 893 0 0-223-893 0z" horiz-adv-x="928" />
+<glyph glyph-name="plus" unicode="&#xe806;" d="m911 462l0-223-335 0 0-336-223 0 0 336-335 0 0 223 335 0 0 335 223 0 0-335 335 0z" horiz-adv-x="928" />
+<glyph glyph-name="menu" unicode="&#xe807;" d="m68 62q0-30 21-51t51-21h793q30 0 51 21t21 51-21 51-51 21h-793q-29 0-51-21t-21-51z m0 288q0-30 21-51t51-21h793q30 0 51 21t21 51-21 51-51 21h-793q-29 0-51-21t-21-51z m0 288q0-30 21-51t51-21h793q30 0 51 21t21 51-21 51-51 21h-793q-29 0-51-21t-21-51z" horiz-adv-x="1073.2" />
+</font>
+</defs>
+</svg>
