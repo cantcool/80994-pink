@@ -1,0 +1,40 @@
+.application {
+  background-color: $dark-grey-color;
+  color: #fff;
+  text-align: center;
+  padding: 28px 18px;
+
+  &__btn {
+    display: inline-block;
+    padding: 12px 36px;
+    border: 3px solid $outline-color;
+    border-radius: 28px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__logotypes-wrap {
+    display: block;
+    margin: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__app-logo {
+    margin-right: 33px;
+  }
+
+  &__app-logo:last-child {
+    margin-right: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

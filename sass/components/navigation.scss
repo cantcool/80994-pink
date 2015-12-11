@@ -1,0 +1,37 @@
+.navigation {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 90;
+
+  &__list {
+    position: absolute;
+    min-width: 320px;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    list-style: none;
+    background-color: $menu-bg-color;
+    line-height: 20px;
+  }
+
+  &__item {
+    display: block;
+    height: 65px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__link {
+    display: inline-block;
+    min-height: 32px;
+    color: $text-menu-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 32px;
+    font-size: $html-size-menu;
+  }
+}

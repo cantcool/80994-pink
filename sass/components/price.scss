@@ -1,0 +1,14 @@
+.price {
+  background: $bg-grey-light-color;
+  display: block;
+  padding: 70px 0 30px;
+  width: min-width-xs;
+  overflow: hidden;
+  text-align: center;
+
+  &__slider-content {
+    position: relative;
+    width: 960px;
+    left: -260px;
+  }
+}

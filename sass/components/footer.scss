@@ -1,0 +1,35 @@
+.footer {
+  background-color: #fff;
+  text-align: center;
+
+  &__contacts {
+    padding: 25px 20px;
+  }
+
+  &__social {
+    margin-top: 36px;
+
+  }
+
+  &__htmlacademy {
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+
+  &__map {
+    display: block;
+    height: 205px;
+    min-width: $min-width-xs;
+    background: #eae6dd;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 200;
+  }
+}
