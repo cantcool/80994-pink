@@ -9,8 +9,8 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  width: $min-width-xs;
-  min-width: $min-width-xs;
+  width: 100%;
+  //min-width: $min-width-xs;
   font-family: $font-family;
   font-size: $html-size-base;
   font-weight: $font-weight;

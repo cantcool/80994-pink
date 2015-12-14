@@ -1,0 +1,87 @@
+.effect {
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 80vw;
+    justify-content: center;
+    //outline: 1px dashed black;
+  }
+
+  &__description {
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0 26px 0 0;
+    width: 50vw;
+    //outline: 1px dashed green;
+
+
+    h3 {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: bold;
+      padding-right: 40%;
+      margin: 22px 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: $accent-color;
+      text-decoration: underline;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      padding: 0 30px 0 0;
+      width: 58%;
+
+      h3 {
+        margin: 10px 0 24px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 0px;
+      }
+
+
+    }
+  }
+
+  &__more {
+    display: block;
+    margin-top: 6px;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 30px;
+    }
+  }
+
+  &__banner {
+    width: 50vw;
+    height: 415px;
+    margin: 0 auto;
+    background: url("../img/timer.svg") no-repeat 50%;
+    background-size: auto 305px;
+    //outline: 1px dashed red;
+
+    @media (min-width: $screen-lg) {
+      width: 32%;
+      min-height: 435px;
+      background-size: auto auto;
+    }
+  }
+}

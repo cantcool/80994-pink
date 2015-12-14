@@ -1,0 +1,66 @@
+.logo-white {
+
+  margin: auto 6vw;
+  width: 75px;
+  height: 23px;
+
+  &__mobile {
+    display: block;
+  }
+
+  &__tablet {
+    display: none;
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+  @media (min-width: $screen-md) {
+    position: relative;
+    width: 146px;
+    height: 40px;
+    top: -8px;
+
+    &__mobile {
+      display: none;
+    }
+
+    &__tablet {
+      display: block;
+    }
+
+    &__desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: auto 11vw;
+
+    &__tablet {
+      display: none;
+    }
+
+    &__desktop {
+      display: block;
+    }
+  }
+
+
+  &:hover {
+    .logoGlasses,
+    .logoLetter {
+      fill: $accent-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .logoGlasses,
+    .logoLetter {
+      fill: #fff;
+    }
+  }
+}

@@ -1,8 +1,25 @@
 .price-table {
   display: table;
-  background: #fff;
-  margin-bottom: 28px;
-  text-transform: uppercase;
+  margin: 0 auto 10px;
+  min-width: 840px;
+
+  tr {
+    display: table-row;
+  }
+
+  td {
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    padding: 17px 22px;
+    width: 280px;
+    text-transform: uppercase;
+  }
+
+  th:nth-of-type(1),
+  td:nth-of-type(1) {
+    display: none;
+    text-align: left;
+  }
 
   &__header {
     display: table-cell;
@@ -13,6 +30,7 @@
     height: 98px;
     color: #fff;
     font-size: 18px;
+    text-transform: uppercase;
 
     &--highlighted {
       background-image: url("../img/price_hit.png");
@@ -21,8 +39,6 @@
     }
   }
 
-
-
   &__price {
     display: block;
     font-size: 24px;
@@ -30,38 +46,84 @@
     margin-top: 4px;
   }
 
-  td {
-    display: table-cell;
-    border: 2px solid #e5e5e5;
-    padding: 18px 22px;
-    width: 280px;
-    text-align: left;
-  }
-
-  &__slider-controls {
-    padding: 24px;
+  &--empty {
+    visibility: hidden;
+    border: 1px solid transparent;
   }
 
   &__checkbox {
     display: inline-block;
+    vertical-align: middle;
     float: right;
     font-size: 0;
+    width: 30px;
+    height: 30px;
+
+    &--yes {
+      width: 30px;
+      height: 22px;
+      background: url("../img/yes.svg") no-repeat;
+    }
+
+    &--no {
+      width: 27px;
+      height: 28px;
+      background: url("../img/no.svg") no-repeat;
+    }
   }
 
-  &__checkbox:after {
-    float: right;
-    content: '';
+  @media (min-width: $screen-md) {
+    font-size: 14px;
+    min-width: 620px;
+
+    &__header {
+      font-size: 16px;
+      height: 80px;
+    }
+
+    &__price {
+      font-size: 18px;
+    }
+
+    &__content {
+      display: none;
+    }
+
+    &__checkbox {
+      float: none;
+    }
+
+    td {
+      width: 154px;
+      text-transform: none;
+      padding: 9px 18px;
+      text-align: center;
+    }
+
+    th:nth-of-type(1),
+    td:nth-of-type(1) {
+      width: 155px;
+      display: table-cell;
+    }
   }
 
-  &__checkbox--yes:after {
-    width: 29px;
-    height: 22px;
-    background: url("../img/checked_yes.png") no-repeat;
-  }
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+    min-width: 940px;
 
-  &__checkbox--no:after {
-    width: 26px;
-    height: 26px;
-    background: url("../img/checked_no.png") no-repeat;
+    &__header {
+      font-size: 18px;
+      height: 80px;
+      height: 100px;
+    }
+
+    &__price {
+      font-size: 24px;
+    }
+
+    td {
+      // width: 238px;
+      padding: 16px 22px;
+    }
   }
 }

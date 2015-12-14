@@ -1,0 +1,21 @@
+.arrow-controls {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+
+  &__item {
+    width: 21px;
+    height: 41px;
+    cursor: pointer;
+
+    background: url("../img/review-arrow-right.svg") no-repeat;
+
+    &--prev {
+      background: url("../img/review-arrow-left.svg") no-repeat;
+    }
+  }
+
+
+}

@@ -2,21 +2,68 @@
   background-color: $dark-grey-color;
   color: #fff;
   text-align: center;
-  padding: 28px 18px;
+  padding: 28px 10px;
+
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: 360px;
+    background-color: transparent;
+    margin: 10px 5%;
+    padding: 10px 0;
+    width: 48%;
+    min-width: 300px;
+  }
+
+  @media (min-width: $screen-lg) {
+    position: absolute;
+    top: 360px;
+    background-color: transparent;
+    margin: 78px 10.8% 10px;
+    padding: 10px 0;
+    width: 25%;
+  }
 
   &__btn {
     display: inline-block;
-    padding: 12px 36px;
+    padding: 12px 30px;
     border: 3px solid $outline-color;
     border-radius: 28px;
     font-weight: bold;
     font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+
+    @media (min-width: $screen-lg) {
+      padding: 14px 28px;
+      font-size: 21px;
+    }
+
+    &:hover {
+      color: $accent-color;
+      background-color: #fff;
+    }
+
+    &:active {
+      color: rgba( $accent-color, 0.3 );
+      background-color: #fff;
+    }
   }
 
   &__logotypes-wrap {
     display: block;
     margin: 32px;
     margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin: 48px 0 30px;
+      padding: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin: 68px 0 50px;
+      padding: 0;
+    }
   }
 
   &__app-logo {
@@ -31,6 +78,11 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+      padding: 0;
+    }
   }
 
   a {

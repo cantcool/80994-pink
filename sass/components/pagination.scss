@@ -23,6 +23,14 @@
     border-radius: 50%;
   }
 
+  input[type='radio'] + label:hover:before {
+    background-color: #7e868f;
+  }
+
+  input[type='radio'] + label:active:before {
+    background-color: #e9ebec;
+  }
+
   input[type='radio']:checked + label:before {
     display: inline-block;
     content: '';

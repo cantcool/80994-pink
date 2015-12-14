@@ -1,54 +1,219 @@
 .reasons {
   text-align: center;
-  background: $bg-grey-light-color;
+  background-color: $bg-grey-light-color;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
+  display: block;
+
 
   &__title {
-    padding: 22px;
+    margin: 0;
+    padding: 20px;
     background: $bg-color;
-    margin-bottom: 36px;
+
+    @media (min-width: $screen-md) {
+      padding: 48px 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 65px 20px;
+    }
 
     h2 {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       font-size: 24px;
       font-weight: 300;
-      line-height: 29px;
+      line-height: 28px;
+
+      @media (min-width: $screen-md) {
+        margin: 0;
+        line-height: 48px;
+        font-weight: 300;
+        font-size: 40px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin: 0;
+        line-height: 60px;
+        font-size: 50px;
+      }
+    }
+
+    h2:last-child {
+      margin-bottom: 12px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: -2px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 12px;
+      }
     }
   }
 
-  &__wrap {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
     padding: 0;
-    margin: 0;
+    position: relative;
+    top: 0;
+    background: url("../img/triangle-white.svg") no-repeat 0 top;
+    background-size: 100% 32px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row-reverse;
+      justify-content: center;
+      background-size: 100% 52px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-direction: column-reverse;
+      background-size: 100% 92px;
+    }
   }
 
-  &__block {
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 0 0 ;
+
+    @media (min-width: $screen-md) {
+      width: 50vw;
+      padding: 60px 1.4vw 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 78vw;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &__text-set {
+    display: block;
     line-height: 24px;
-    padding: 22px;
-    padding-top: 10px;
-    padding-bottom: 0;
+    padding: 0 22px 0;
 
     h3 {
       font-size: 18px;
       font-weight: bold;
-      margin: 14px;
-      margin-bottom: 10px;
+      margin: 21px 0 10px;
     }
 
     p {
       font-size: 14px;
       margin-bottom: 8px;
     }
+
+    @media (min-width: $screen-md) {
+      padding: 4px 18px 0 0;
+      text-align: left;
+
+      h3 {
+        margin: 10px 0 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 10px 1vw;
+      margin: 24px 0;
+      width: 25vw;
+      text-align: center;
+
+      h3 {
+        font-size: 30px;
+        line-height: 30px;
+        margin: 20px 0 16px;
+        padding: 0 2vw;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 0 10px;
+        margin: 24px 0 10px;
+        line-height: 30px;
+      }
+    }
   }
 
-  &__banner {
-    position: relative;
-    left: 50%;
-    height: 275px;
-    width: 160px;
-    margin-left: -80px;
-    margin-top: 40px;
+  &__banners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
     padding: 0;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+      width: 46vw;
+      height: 100%;
+      padding: 0;
+
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 302px;
+      width: 78vw;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__phone {
+    display: inline-flex;
+    margin: 32px auto 0;
+    width: 158px;
+    height: 278px;
+    background: url("../img/screen-mobile-3.png") no-repeat 50%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      //opacity: 0.3;
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 5px 0 0 0;
+      width: 100%;
+      height: 481px;
+      background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat 50% 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 25vw;
+      height: 302px;
+      margin: 0;
+      padding: 0;
+      background-image: url("../img/iphone-screen-desktop-3@1x.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      &--phone1 {
+        background-image: url("../img/iphone-screen-desktop-1@1x.png");
+      }
+
+      &--phone2 {
+        background-image: url("../img/iphone-screen-desktop-2@1x.png");
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        display: inline-flex;
+      }
+
+    }
   }
 }
