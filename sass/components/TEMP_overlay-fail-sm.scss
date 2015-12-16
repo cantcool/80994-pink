@@ -4,10 +4,11 @@ body {
 
 .TEMP_overlayPixelPerfect {
   position: absolute;
-  top: -25px;
+  top: 0;
+  //left: 50%;
   z-index: 500;
-  width: 320px;
-  height: 4003px;
+  width: 460px;
+  height: 364px;
   opacity: 0.5;
-  background: url("../../pink-form-mobile.png") no-repeat;
+  background: url("../../pink-fail-sm.png") no-repeat;
 }

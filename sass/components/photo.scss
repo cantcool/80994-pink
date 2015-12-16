@@ -2,13 +2,19 @@
   &__item {
     position: relative;
     display: inline-block;
-    vertical-align: top;
-    margin-right: 37px;
-    margin-bottom: 20px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
+    // outline: 1px dashed cyan;
+
+    margin: 0 4% 18px;
+
+    @media(min-width: $screen-md) {
+      margin: 0 4% 41px;
     }
+
+    @media(min-width: $screen-lg) {
+      margin: 0 4% 21px;
+    }
+
 
     &:before {
       position: absolute;
@@ -16,17 +22,24 @@
       left: 50px;
       display: block;
       border: 2px solid $input-border-color;
-      background-color: #fff;
+
       border-radius: 50%;
       width: 32px;
       height: 32px;
-      color: $input-border-color;
-      font-size: 16px;
-      font-family: 'fontello';
-      content: '\e804';
-      text-align: center;
-      vertical-align: center;
-      line-height: 27px;
+      content: '';
+      background-image: url("../img/delete-cross.svg");
+      background-size: 10px 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
+
+      @media(min-width: $screen-md) {
+        top: -25px;
+        left: 92px;
+        width: 55px;
+        height: 55px;
+        background-size: 18px 18px;
+      }
     }
 
     img {
@@ -35,6 +48,11 @@
       height: 68px;
       overflow: hidden;
       margin: 0;
+
+      @media(min-width: $screen-md) {
+        width: 120px;
+        height: 120px;
+      }
     }
 
     span {
@@ -46,4 +64,6 @@
       padding-top: 8px;
     }
   }
+
+
 }

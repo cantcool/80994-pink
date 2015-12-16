@@ -1,5 +1,7 @@
 .regform {
   text-align: center;
+  //position: relative;
+
 
   &__heading {
     width: 88%;
@@ -44,9 +46,9 @@
     text-align: left;
 
     &:nth-child(2n) {
-      @media (max-width: $screen-md) {
-        background-color: $bg-grey-light-color;
-      }
+        @media (max-width: $screen-md) {
+          background-color: $bg-grey-light-color;
+        }
     }
 
     @media (min-width: $screen-md) {
@@ -55,101 +57,10 @@
 
     @media (min-width: $screen-lg) {
       padding: 3px 10.8% 40px;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-
     }
   }
 
-  &__fieldset-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 3px 6% 25px;
-    position: relative;
-    width: 100%;
 
-    &--no-border {
-      padding: 3px 6% 44px;
-    }
-
-    &--send {
-      flex-direction: column;
-      justify-content: center;
-      padding: 50px 6% 0;
-    }
-
-    @media (min-width: $screen-md) {
-      padding: 33px 58px 38px;
-      border: 2px solid $input-border-color;
-      border-radius: $input-corner-border-radius;
-
-      &--no-border {
-        margin: 0;
-        padding: 0 0 0;
-        border: 1px solid transparent;
-      }
-
-      &--when {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 42px;
-        padding-bottom: 0px;
-      }
-
-      &--accomp {
-        padding-bottom: 38px;
-      }
-
-      &--achievments {
-        padding-top: 28px;
-        padding-bottom: 25px;
-      }
-
-      &--photos {
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding-top: 48px;
-      }
-
-      &--send {
-        padding-top: 22px;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    @media (min-width: $screen-lg) {
-      flex-direction: row;
-      justify-content: space-between;
-
-      &--application {
-        padding: 33px 0px 38px 58px;
-      }
-
-      &--when {
-        flex-wrap: nowrap;
-      }
-
-      &--accomp {
-        flex-direction: column;
-        padding-bottom: 58px;
-      }
-
-      &--achievments {
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-between;
-        height: 230px;
-        padding-right: 10px;
-      }
-    }
-  }
 
   &__header {
     margin: 33px 0 19px;
@@ -187,6 +98,92 @@
     }
   }
 
+
+
+  &__fieldset-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 3px 6% 25px;
+    position: relative;
+    width: 100%;
+    outline: 2px dotted red;
+
+    &--intro {
+      padding: 3px 6% 44px;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 33px 58px 38px;
+      border: 2px solid $input-border-color;
+      border-radius: $input-corner-border-radius;
+
+      &--no-border {
+        margin: 0;
+        padding: 0 0 0;
+        border: 1px solid transparent;
+      }
+
+      &--when {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 42px;
+        padding-bottom: 0px;
+      }
+
+      &--accomp {
+        padding-bottom: 38px;
+      }
+
+      &--achievments {
+        padding-top: 28px;
+        padding-bottom: 25px;
+      }
+
+       &--photos {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 48px;
+      }
+
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--application {
+        padding: 33px 0px 38px 58px;
+      }
+
+      &--when {
+        flex-wrap: nowrap;
+      }
+
+      &--accomp {
+        flex-direction: column;
+        padding-bottom: 58px;
+      }
+
+      &--achievments {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 230px;
+        padding-right: 10px;
+        // padding-bottom: 40px;
+
+        //justify-content: space-between;
+      }
+    }
+
+
+  }
+
+
+
+
   &__input-group {
     font-size: 0;
     position: relative;
@@ -194,6 +191,9 @@
     margin: 0 0 0;
     padding: 0;
     border: 1px solid transparent;
+    outline: 1px dotted green;
+
+
 
     &--divided {
       width: 100%;
@@ -213,6 +213,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
+      // outline: 1px dashed red;
       margin-bottom: 16px;
 
       @media (min-width: $screen-md) {
@@ -228,6 +229,7 @@
     }
 
     &--accomp-num {
+      // outline: 1px dashed orange;
       flex-basis: $input-base-size;
       min-width: auto !important; //reset mediaquery
 
@@ -291,6 +293,8 @@
     }
   }
 
+
+
   &__label {
     display: block;
     font-size: $html-size-base;
@@ -323,6 +327,7 @@
     }
   }
 
+
   &__range-set {
     display: flex;
     flex-direction: row;
@@ -352,20 +357,6 @@
     text-align: center;
     font-weight: normal;
 
-    &:hover {
-      border: 2px solid $input-border-hover-color;
-    }
-
-    &:active {
-      color: #fff;
-      border: 2px solid $input-border-hover-color;
-      background-color: $input-border-hover-color;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
     &--decr {
       border-radius: $input-corner-border-radius 0 0 $input-corner-border-radius;
     }
@@ -379,8 +370,6 @@
         border-radius: $input-corner-border-radius;
       }
     }
-
-
   }
 
   &__delete-btn {
@@ -396,15 +385,7 @@
     cursor: pointer;
     text-align: right !important; // mediaquery reset
 
-    &:hover {
-      text-decoration: underline;
-      color: $accent-color;
-    }
 
-    &:active {
-      text-decoration: none;
-      opacity: 0.3;
-    }
 
     @media (min-width: $screen-md) {
       display: inline-block;
@@ -412,44 +393,35 @@
   }
 
   &__comment {
+
     display: inline-flex;
-    justify-content: center;
+    outline: 1px dashed red;
     text-transform: uppercase;
+    margin-bottom: 60px;
 
-    @media (max-width: $screen-md) {
-      margin: 44px 0 0;
-    }
-
-    @media (min-width: $screen-lg) {
-      justify-content: flex-end;
-    }
-
-    &--attention {
+    span {
       color: $accent-color;
-    }
-
-    &--additional {
-      display: none;
-
-      @media (min-width: $screen-lg) {
-        display: inline;
-      }
     }
   }
 
   &__photos-container {
-    // outline: 1px dotted red;
+    outline: 1px dotted red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     // align-content: flex-start;
 
     width: 100%;
     font-size: 0px;
     border-top: 2px solid $input-border-color;
-    padding: 50px 0px 0;
+    padding: 30px -30px 0;
+    //min-width: 280px;
+    // text-align: justify;
 
+    // @media (min-width: $screen-lg) {
+    //   padding: 65px 0 0;
+    // }
   }
 
   &__input {
@@ -475,10 +447,6 @@
 
     :-ms-input-placeholder {
       color: $text-color;
-    }
-
-    &:focus {
-      outline: none;
     }
 
     &--person-num {
@@ -511,19 +479,7 @@
       display: block;
       width: 100%;
       border-radius: $input-corner-border-radius;
-
-      &:hover {
-        border: 2px solid $input-border-hover-color;
-      }
-
-      &:focus,
-      &:active {
-        border: 2px solid $accent-color;
-      }
-
-
-
-
+      //color: blue; //$text-color;
     }
 
     &--in-range {
@@ -548,17 +504,28 @@
       }
     }
 
-    &--upload-btn-hidden {
-     display: none;
+    &--upload-btn {
+      display: block;
+      margin-bottom: 10px;
+      outline: 1px dashed green;
+      background-color: $bg-color;
+      width: 100%;
+      height: $input-base-size;
+      font-size: 10px;
+      background-color: #fff;
+      margin-bottom: 50px;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 43px;
+      }
+
     }
-
-
 
 
 
     &--submit {
       display: inline-block;
-      width: 100%;
+      width: 280px;
       text-align: center;
       font-size: 18px;
       font-weight: bold;
@@ -566,25 +533,8 @@
       text-transform: uppercase;
       background-color: $success-color;
       border: 1px solid transparent;
+      margin: 35px 0 30px;
       border-radius: $input-corner-border-radius;
-
-      @media (min-width: $screen-md) {
-         width: 296px;
-      }
-
-      &:hover {
-        background-color: darken($success-color, 3%);
-      }
-
-      &:active {
-        color: mix(darken(#fff, 10%), $success-color);
-      }
-
-      &:disabled {
-        background: $input-border-color;
-      }
-
-
     }
 
 
@@ -607,16 +557,9 @@
       text-transform: none;
       font-size: 18px;
       line-height: 30px;
+
       margin: 21px 10px 21px 58px;
       padding: 0;
-    }
-
-    &[type="radio"] + label:hover:before {
-      border: 2px solid $input-border-hover-color;
-    }
-
-    &[type="radio"] + label:active:before {
-      border: 2px solid $accent-color;
     }
 
     &[type="radio"] + label:before {
@@ -630,6 +573,7 @@
       border-radius: 50%;
       content: '';
       background-color: #fff;
+
     }
 
     &[type="radio"]:checked + label:before {
@@ -649,14 +593,6 @@
       cursor: pointer;
     }
 
-    &[type="checkbox"] + label:hover:before {
-      border: 2px solid $input-border-hover-color;
-    }
-
-    &[type="checkbox"] + label:active:before {
-      border: 2px solid $accent-color;
-    }
-
     &[type="checkbox"] + label:before {
       position: absolute;
       left: 0px;
@@ -667,10 +603,12 @@
       border: 2px solid $input-border-color;
       border-radius: $input-corner-border-radius;
       background-color: #fff;
+
       content: '';
     }
 
     &[type="checkbox"]:checked + label:before {
+      font-family: "fontello";
       font-size: 24px;
       padding-top: 6px;
       padding-left: 7px;
@@ -680,41 +618,14 @@
       color: $accent-color;
     }
 
+    &[type="file"] {
 
+    }
 
     &:disabled {
       background: #f2f2f2;
     }
   }
 
-  &__upload-btn-label {
-    display: block;
 
-    width: 100% !important; // mediaquery reset
-    padding: 16px 20px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: $text-color;
-    text-transform: uppercase;
-    background-color: #fff;
-    border: 2px solid $input-border-color;
-    border-radius: $input-corner-border-radius;
-
-    cursor: pointer;
-
-    @media (min-width: $screen-md) {
-       width: 296px;
-    }
-
-    &:hover {
-      border-color: $input-border-hover-color;
-    }
-
-    &:active {
-      color: #fff;
-      background-color: $input-border-hover-color;
-    }
-  }
 }

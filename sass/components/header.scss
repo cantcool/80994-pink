@@ -1,20 +1,21 @@
 .header {
   display: block;
-  height: 460px;
   color: #fff;
   margin: 0;
+  padding: 0;
   background: url("../img/background-mobile@1x.jpg") no-repeat 50% -20px;
   background-color: $menu-bg-color;
   vertical-align: middle;
   overflow: hidden;
   position: relative;
+  min-height: 0;
 
   @media (min-width: $screen-md) {
     background: url("../img/background-tablet@1x.jpg") no-repeat 50% 0;
   }
 
   @media (min-width: $screen-lg) {
-    background: url("../img/background-fullsize.jpg") no-repeat 50% 0;
+    background: url("../img/background-fullsize.jpg") no-repeat 50% center;
     background-size: cover;
   }
 
@@ -50,29 +51,47 @@
   }
 
   &__slogan {
-    //outline: 1px dashed cyan;
-    margin: 5px 14px 10px;
-    padding: 10px 30px;
+    // outline: 1px dashed cyan;
+    margin: 14px auto 0;
+    padding: 0 30px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 300;
     text-align: center;
+    width: 300px;
+
+    &--form {
+      margin: 26px auto 50px;
+    }
 
     @media (min-width: $screen-md) {
-      padding: 30px 10px;
+      margin: 92px 5.7% 0;
+      width: 43%;
+      min-width: 300px;
       font-size: 40px;
       line-height: 48px;
-      margin: 65px 7% 10px;
-      width: 42%;
+
+      &--form {
+        width: 88%;
+        margin: 70px auto 80px;
+        font-size: 50px;
+        line-height: 60px;
+      }
     }
 
     @media (min-width: $screen-lg) {
-
-      padding: 30px 10px;
+      width: 25%;
+      margin: 110px 10.8% 0;
       font-size: 50px;
       line-height: 60px;
-      margin: 78px 10.8% 10px;
-      width: 25%;
+
+       &--form {
+        width: 66%;
+        margin: 62px auto 102px;
+        padding: 0;
+        font-size: 50px;
+        line-height: 60px;
+      }
     }
   }
 }

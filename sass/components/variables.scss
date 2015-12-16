@@ -1,5 +1,5 @@
-$screen-md: 660px;
-$screen-lg: 960px;
+$screen-md: 700px;
+$screen-lg: 1200px;
 
 $menu-bg-color: #283645;
 $menu-bg-over-color: rgba(0, 0, 0, 0.3);
@@ -13,12 +13,16 @@ $outline-color: #fff;
 
 $text-color: #283645;
 $text-menu-color: #fff;
-$link-color: #d22856;
 $accent-color: #d22856;
+$link-color: $accent-color;
+
 $success-color: #2aab6d;
 
 $input-border-color: #e5e5e5;
+$input-border-hover-color: $text-color;
 $input-corner-border-radius: 3px;
+$input-base-size: 60px;
+
 
 $min-width-xs: 320px;
 
