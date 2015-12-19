@@ -229,7 +229,7 @@
 
     &--accomp-num {
       flex-basis: $input-base-size;
-      min-width: auto !important; //reset mediaquery
+      // min-width: auto !important; //reset mediaquery
 
       @media (min-width: $screen-md) {
         margin-right: 10px;
@@ -394,7 +394,7 @@
     font-size: 14px;
     line-height: $input-base-size;
     cursor: pointer;
-    text-align: right !important; // mediaquery reset
+    // text-align: right !important; // mediaquery reset
 
     &:hover {
       text-decoration: underline;
@@ -486,7 +486,7 @@
       position: relative;
       top: 1px;
       left: 5px;
-      padding-left: 22px !important; // reset mediaquery
+      // padding-left: 22px !important; // reset mediaquery
       background-color: $bg-grey-light-color;
       width: $input-base-size;
       height: $input-base-size;
@@ -690,7 +690,7 @@
   &__upload-btn-label {
     display: block;
 
-    width: 100% !important; // mediaquery reset
+    width: 100%; // mediaquery reset
     padding: 16px 20px;
     margin-bottom: 50px;
     text-align: center;
@@ -704,9 +704,13 @@
 
     cursor: pointer;
 
-    @media (min-width: $screen-md) {
-       width: 296px;
-    }
+    // @media (min-width: $screen-md) {
+    //    width: 296px;
+    // }
+
+    // @media (min-width: $screen-md) {
+    //    width: 296px;
+    // }
 
     &:hover {
       border-color: $input-border-hover-color;

@@ -26,6 +26,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    height: 300px;
     min-height: 300px;
 
     padding: 68px 0 35px;
@@ -35,16 +37,19 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+      height: 128px;
       min-height: 128px;
     }
 
     @media (min-width: $screen-lg) {
+      height: 190px;
       min-height: 190px;
     }
   }
 
   &__social {
     margin-top: 36px;
+    align-self: center;
     @media (min-width: $screen-md) {
       margin-top: 0;
     }
