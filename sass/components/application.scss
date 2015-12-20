@@ -2,7 +2,7 @@
   // background-color: $dark-grey-color;
   color: #fff;
   text-align: center;
-  outline: 1px dashed blue;
+  // outline: 1px dashed blue;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -17,7 +17,7 @@
   &__wrap {
     background-color: $dark-grey-color;
     margin-top: 311px;
-    outline: 1px dashed yellow;
+    // outline: 1px dashed yellow;
     padding: 28px 20px;
     @media (min-width: $screen-md) {
       margin-top: 3px;
