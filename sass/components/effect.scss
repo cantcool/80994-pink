@@ -3,36 +3,33 @@
   margin: 0 auto;
   padding: 0;
 
+
   @media (min-width: $screen-md) {
     display: flex;
     align-items: center;
   }
 
   @media (min-width: $screen-lg) {
-    width: 80vw;
+    width: $screen-lg;
     justify-content: center;
-    //outline: 1px dashed black;
   }
 
   &__description {
     line-height: 24px;
     margin: 0 auto;
-    padding: 0 26px 0 0;
-    width: 50vw;
-    //outline: 1px dashed green;
-
+    padding: 0 10px 0;
+    width: 340px;
 
     h3 {
       font-size: 30px;
       line-height: 36px;
       font-weight: bold;
-      padding-right: 40%;
-      margin: 22px 0 10px;
+      padding-right: 35%;
+      margin: 0 0 10px;
     }
 
     p {
       font-size: 14px;
-      margin-bottom: 8px;
     }
 
     a {
@@ -41,12 +38,13 @@
     }
 
     @media (min-width: $screen-lg) {
+      // align-self: flex-start;
       width: auto;
-      padding: 0 30px 0 0;
-      width: 58%;
+      padding: 0 40px 0 10px;
+      width: 580px;
 
       h3 {
-        margin: 10px 0 24px;
+        margin: 20px 0 22px;
         font-size: 30px;
         line-height: 36px;
       }
@@ -54,7 +52,7 @@
       p {
         font-size: 18px;
         line-height: 30px;
-        margin-bottom: 0px;
+        margin-bottom: 30px;
       }
 
 
@@ -63,23 +61,20 @@
 
   &__more {
     display: block;
-    margin-top: 6px;
+    margin-top: 10px;
 
-    @media (min-width: $screen-lg) {
-      margin-top: 30px;
-    }
   }
 
   &__banner {
-    width: 50vw;
+    width: 320px;
     height: 415px;
     margin: 0 auto;
-    background: url("../img/timer.svg") no-repeat 50%;
+    background: url("../img/timer.svg") no-repeat 0px 20px;
     background-size: auto 305px;
-    //outline: 1px dashed red;
+    // outline: 1px dashed darkgrey;
 
     @media (min-width: $screen-lg) {
-      width: 32%;
+      width: 320px;
       min-height: 435px;
       background-size: auto auto;
     }

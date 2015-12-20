@@ -7,22 +7,27 @@
   position: relative;
   display: block;
 
+  &__top {
+    background: $bg-color;
+  }
 
   &__title {
-    margin: 0;
-    padding: 20px;
-    background: $bg-color;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+    width: $screen-sm;
 
     @media (min-width: $screen-md) {
       padding: 48px 20px;
+      width: $screen-md;
     }
 
     @media (min-width: $screen-lg) {
       padding: 65px 20px;
+      width: $screen-lg;
     }
 
     h2 {
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
       font-size: 24px;
       font-weight: 300;
       line-height: 28px;
@@ -57,7 +62,7 @@
   &__body {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     position: relative;
     top: 0;
@@ -65,6 +70,7 @@
     background-size: 100% 32px;
 
     @media (min-width: $screen-md) {
+      margin: 0 auto;
       flex-direction: row-reverse;
       justify-content: center;
       background-size: 100% 52px;
@@ -79,19 +85,24 @@
   &__texts {
     display: flex;
     flex-direction: column;
-    padding: 60px 0 0 0 ;
+    justify-content: center;
+    margin: 0;
+    padding: 60px 0 0 0;
+    width: $screen-sm;
 
     @media (min-width: $screen-md) {
-      width: 50vw;
-      padding: 60px 1.4vw 0;
+      width: 340px;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 60px 50px 0 10px;
     }
 
     @media (min-width: $screen-lg) {
       flex-direction: row;
       justify-content: space-between;
-      width: 78vw;
+      width: 935px;
       margin: 0 auto;
-      padding: 0;
+      padding: 0 0;
     }
   }
 
@@ -112,8 +123,9 @@
     }
 
     @media (min-width: $screen-md) {
-      padding: 4px 18px 0 0;
+      padding: 4px 30px 0 0;
       text-align: left;
+      width: 330px;
 
       h3 {
         margin: 10px 0 10px;
@@ -126,9 +138,10 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding: 10px 1vw;
+
+      padding: 10px 20px;
       margin: 24px 0;
-      width: 25vw;
+      width: 300px;
       text-align: center;
 
       h3 {
@@ -151,23 +164,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    // outline: 1px dashed green;
 
     @media (min-width: $screen-md) {
+      align-self: flex-end;
       justify-content: flex-start;
-      width: 46vw;
+      width: 320px;
       height: 100%;
       padding: 0;
-
     }
 
     @media (min-width: $screen-lg) {
       flex-direction: row;
       justify-content: space-between;
       height: 302px;
-      width: 78vw;
-      padding: 0;
+      width: $screen-lg;
+      padding: 0 10px;
       margin: 0 auto;
     }
   }
@@ -186,14 +200,15 @@
     }
 
     @media (min-width: $screen-md) {
-      margin: 5px 0 0 0;
-      width: 100%;
+      margin: 5px 0 0 20px;
+      width: 268px;
       height: 481px;
       background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat 50% 0;
     }
 
     @media (min-width: $screen-lg) {
-      width: 25vw;
+      // outline: 1px solid green;
+      width: 300px;
       height: 302px;
       margin: 0;
       padding: 0;

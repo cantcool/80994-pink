@@ -3,27 +3,39 @@
   background-size: 100% 28px;
   background-color: $bg-grey-light-color;
   display: block;
-  padding: 95px 0 0;
+  padding: 90px 0 47px;
   text-align: center;
   //outline: 1px dashed green;
 
   @media (min-width: $screen-md) {
     background-size: 100% 54px;
-    padding: 80px 0 60px;
+    padding: 85px 0 60px;
   }
 
   @media (min-width: $screen-lg) {
-    background-size: 100% 95px;
-    padding: 155px 0 85px;
+    background-size: 100% 75px;
+    padding: 145px 0 85px;
   }
 
 
-  &__content-wrap {
-    //outline: 1px dashed red;
+  &__wrap {
+    margin: 0 auto;
+    padding: 0;
+
+    width: $screen-sm;
+
+    @media (min-width: $screen-md) {
+      width: $screen-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: $screen-lg;
+    }
+
   }
 
   &__slider-controls {
-    padding: 40px;
+    margin: 34px 0 0;
     @media (min-width: $screen-md) {
       display: none;
     }

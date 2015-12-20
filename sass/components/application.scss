@@ -2,22 +2,22 @@
   background-color: $dark-grey-color;
   color: #fff;
   text-align: center;
-  padding: 28px 0;
-  //outline: 1px dashed blue;
+  padding: 28px 20px;
+  // outline: 1px dashed blue;
 
+  position: absolute;
+  top: 392px;
 
   @media (min-width: $screen-md) {
-    position: absolute;
-    top: 0px;
+    top: 147px;
     background-color: transparent;
-    margin: 350px 5.7% 0;
-    width: 43%;
-    min-width: 300px;
+    margin: 92px 20px 0;
+    padding: 28px 0px;
+    width: 300px;
   }
 
   @media (min-width: $screen-lg) {
-    width: 25%;
-    margin: 448px 10.8% 10px;
+    margin: 190px 10px 10px;
     padding: 0;
   }
 
@@ -29,8 +29,14 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
+    min-width: 280px;
+
+    @media (min-width: $screen-md) {
+      margin-left: -20px;
+    }
 
     @media (min-width: $screen-lg) {
+      margin-left: 0px;
       padding: 14px 28px;
       font-size: 21px;
     }

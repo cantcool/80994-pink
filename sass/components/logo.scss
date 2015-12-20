@@ -1,8 +1,39 @@
 .logo {
-
   margin: 0;
-  width: 75px;
-  height: 23px;
+
+  &__letters {
+    fill: $logo-dark-color;
+
+    &--white {
+      fill: $logo-white-color;
+    }
+  }
+
+  &__letters-stars {
+    fill: $logo-accent-color;
+  }
+
+  &__glasses {
+    fill: $logo-accent-color;
+
+    &--white {
+      fill: $logo-white-color;
+    }
+  }
+
+  &__glasses-stars {
+    fill: $logo-dark-color;
+
+    &--white {
+      fill: $logo-accent-color;
+    }
+  }
+
+  &__letters-stars {
+    fill: $logo-accent-color;
+  }
+
+
 
   &__mobile {
     display: block;
@@ -15,6 +46,8 @@
   &__desktop {
     display: none;
   }
+
+
 
   @media (min-width: $screen-md) {
     position: relative;
@@ -36,7 +69,6 @@
   }
 
   @media (min-width: $screen-lg) {
-    margin: 0;
 
     &__tablet {
       display: none;
@@ -47,19 +79,18 @@
     }
   }
 
-
   &:hover {
-    .logoGlasses,
-    .logoLetter {
-      fill: $accent-color;
+    .logo__glasses,
+    .logo__letters {
+      fill: $logo-accent-color;
     }
   }
 
   &:active {
     opacity: 0.3;
 
-    .logoGlasses,
-    .logoLetter {
+    .logo__letters,
+    .logo__glasses {
       fill: #fff;
     }
   }

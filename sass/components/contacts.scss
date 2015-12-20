@@ -1,15 +1,17 @@
 .contacts {
   color: #283645;
-  margin: 0;
+  margin: 0 auto;
   padding: 35px 20px 25px;
+  width: $screen-sm;
 
   @media (min-width: $screen-md) {
-    padding-top: 35px;
-    padding-bottom: 5px;
+    width: $screen-md;
+    padding: 35px 10px 5px;
   }
 
   @media (min-width: $screen-lg) {
-    padding-bottom: 0px;
+    width: $screen-lg;
+    padding: 35px 20px 0px;
   }
 
   h3 {
@@ -31,13 +33,17 @@
     }
   }
 
+
   &__content {
-    // outline: 1px dashed green;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+
+    @media (min-width: $screen-lg) {
+      justify-content: space-between;
+    }
   }
 
   &__group {
@@ -48,7 +54,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: 28%;
+      width: 30%;
 
       &:nth-child(2) {
         order: 3;
@@ -66,7 +72,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      margin: 24px 0 24px;
+      margin: 28px 0 24px;
     }
 
   }

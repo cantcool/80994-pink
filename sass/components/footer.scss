@@ -3,13 +3,18 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  // outline: 1px dashed red;
 
 
 
-  &__contacts-wrapper {
+  &__contacts-wrap {
+    padding: 8px 0 0 0;
+
     @media (min-width: $screen-md) {
-      padding: 18px 0 0 0;
+      padding: 10px 0 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 22px 0 23px;
     }
   }
 
@@ -22,26 +27,29 @@
   }
 
   &__copyrights {
+    width: $screen-sm;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     height: 300px;
-    min-height: 300px;
-
     padding: 68px 0 35px;
 
+
+
     @media (min-width: $screen-md) {
-      padding: 0;
+      width: $screen-md;
+      padding: 20px;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       height: 128px;
-      min-height: 128px;
     }
 
     @media (min-width: $screen-lg) {
+      width: $screen-lg;
+      padding: 10px;
       height: 190px;
       min-height: 190px;
     }
@@ -76,7 +84,7 @@
     }
 
     @media (min-width: $screen-md) {
-      margin-top: 0;
+      margin-top: 10px;
     }
     @media (min-width: $screen-lg) {
       font-size: 18px;
@@ -86,6 +94,7 @@
   &__htmlacademy-logo {
     display: inline-block;
     vertical-align: middle;
+    margin-left: 11px;
 
     .logo-svg {
       margin-left: 10px;
@@ -103,7 +112,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      height: 525px;
+      height: 496px;
     }
   }
 
@@ -139,7 +148,7 @@
 
     @media (min-width: $screen-lg) {
       height: 125px;
-      background-size: 100% 125px;
+      background-size: 100% 100px;
     }
   }
 }
