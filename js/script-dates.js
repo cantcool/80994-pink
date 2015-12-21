@@ -1,92 +1,61 @@
 (function init() { "use strict";
 
-  if (!document.querySelector("#accomp-range")) {
+  if (!document.querySelector("#dates-range")) {
     return;
   };
 
   var _form = document.querySelector("#reg_form"),
-      controls = _form.querySelector("#accomp-range"),
-      decrBtn = controls.querySelector("#accomp_decr"),
-      incrBtn = controls.querySelector("#accomp_incr"),
-      itemsContainer = _form.querySelector("#accompMembers_group"),
-      itemTemplate = document.querySelector("#accomp-tpl").innerHTML,
-      itemsAmountInput = controls.querySelector("#accomp_quantity"),
-      itemsAmount = parseInt(itemsAmountInput.getAttribute("placeholder"));
+      controls = _form.querySelector("#dates-range"),
+      decrBtn = controls.querySelector("#dates-decr"),
+      incrBtn = controls.querySelector("#dates-incr"),
+      daysDurationInput = controls.querySelector("#dates-duration"),
+      daysDuration = parseInt(daysDurationInput.getAttribute("placeholder"));
 
-  initControls();
+  // console.log(daysDuration);
+
   disableRequiringOfItemsForDebug();
+  initControls();
 
   function initControls() {
-    decrBtn.addEventListener("click", removeLastItem);
-    incrBtn.addEventListener("click", addItem);
-
-    var fields = itemsContainer.querySelectorAll(".regform__input-group--accomp-set");
-
-    assignItemHandlers(fields[0]);
-    assignItemHandlers(fields[1]);
+    decrBtn.addEventListener("click", decrDays);
+    incrBtn.addEventListener("click", incrDays);
   }
 
-  function removeLastItem(e) {
+  function decrDays(e) {
     e.preventDefault();
 
-    var allItems = itemsContainer.querySelectorAll(".regform__input-group--accomp-set"),
-        lastItem = allItems[allItems.length-1];
+    if(daysDuration <= 1) { return; }
 
-    if(allItems.length <= 1) { return; }
-
-    lastItem.parentNode.removeChild(lastItem);
-    updateIndexes();
+    daysDuration -= 1;
+    updateDays();
   }
 
-  function removeItem(e) {
+  function incrDays(e) {
     e.preventDefault();
 
-    var thisItem = e.target.parentNode;
+    if(daysDuration >= 356) { return; }
 
-    thisItem.parentNode.removeChild(thisItem);
-    updateIndexes();
+    daysDuration += 1;
+    updateDays();
   }
 
-  function addItem(e) {
-    e.preventDefault();
-
-    var allItems = itemsContainer.querySelectorAll(".regform__input-group--accomp-set"),
-        itemsNum = allItems.length,
-        newItem;
-
-    if(itemsNum >= 9) { return; }
-
-    newItem = document.createElement('div');
-    newItem.classList.add("regform__input-group");
-    newItem.classList.add("regform__input-group--accomp-set");
-
-    newItem.innerHTML = Mustache.render(itemTemplate, {
-      "number": itemsNum + 1
-    });
-
-    itemsContainer.appendChild(newItem);
-
-    assignItemHandlers(newItem);
-    updateIndexes();
+  function updateDays() {
+    daysDurationInput.setAttribute("placeholder", daysDuration + " " + numberToDaysWord( daysDuration ).toLowerCase() );
   }
 
-  function assignItemHandlers(item) {
-    var deleteBtn = item.querySelector(".regform__delete-btn");
-    deleteBtn.addEventListener("click", removeItem)
+  function numberToDaysWord(number) {
+    var digit = parseInt(number.toString().substr(-1));
+
+    if(number > 10 && number < 16) {
+      return 'Дней';
+    } else if (digit == 1) {
+      return 'День';
+    } else if (digit > 1 && digit < 5) {
+      return 'Дня';
+    } else {
+      return 'Дней';
+    }
   }
-
-  function updateIndexes() {
-    var fields = itemsContainer.querySelectorAll(".regform__input--person-num"),
-        i,
-        fieldsNumber = fields.length;
-
-    itemsAmount = fieldsNumber;
-    itemsAmountInput.setAttribute("placeholder", itemsAmount + ' чел');
-
-    for (i = 0; i < fieldsNumber; i++) {
-      fields[i].setAttribute("placeholder", i + 1);
-    };
-  };
 
   function disableRequiringOfItemsForDebug() {
     var allInputsArray = Array.prototype.slice.call(document.querySelectorAll('input'));
@@ -94,7 +63,6 @@
       item.required = false;
     });
   }
-
 
 
 })();
