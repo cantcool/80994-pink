@@ -185,7 +185,7 @@
 
     <div class="regform">
       <h2 class="regform__heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="regform__heading--additional">Пожалуйста, заполните форму ниже:</span></h2>
-      <form action="/" method="post">
+      <form id="reg_form" action="/" method="post">
 
         <div class="regform__fieldset  regform__fieldset--name">
           <div class="regform__fieldset-body  regform__fieldset-body--name">
@@ -249,14 +249,14 @@
           <div class="regform__fieldset-body  regform__fieldset-body--accomp">
 
             <div class="regform__input-group  regform__input-group--divided">
-              <div class="regform__range-set">
+              <div class="regform__range-set" id="accomp-range">
                 <button class="regform__range-btn regform__range-btn--decr  regform__range-btn--accomp" id="accomp_decr"><span>–</span></button>
-                <input class="regform__input regform__input--in-range  regform__input--in-range-accomp" id="accomp_quantity" type="text" name="tripDuration" placeholder="2 чел">
+                <input class="regform__input regform__input--in-range  regform__input--in-range-accomp" id="accomp_quantity" type="text" name="accomp_quantity" placeholder="2 чел">
                 <button class="regform__range-btn  regform__range-btn--incr  regform__range-btn--accomp" id="accomp_incr"><span>+</span></button>
               </div>
             </div>
             <div id="accompMembers_group">
-              <div id="accompMember_1" class="regform__input-group regform__input-group--accomp-set">
+              <div class="regform__input-group regform__input-group--accomp-set">
                 <div class="regform__input-group  regform__input-group--accomp-num">
                   <label class="regform__label" for="accompItemNum_1">№</label>
                   <input class="regform__input  regform__input--person-num" id="accompItemNum_1" name="accompItemNum_1" placeholder="1" readonly>
@@ -274,7 +274,7 @@
                 <div class="regform__delete-btn">Удалить</div>
               </div>
 
-              <div id="accompMember_2" class="regform__input-group regform__input-group--accomp-set">
+              <div class="regform__input-group regform__input-group--accomp-set">
                 <div class="regform__input-group  regform__input-group--accomp-num">
                   <label class="regform__label" for="accompItemNum_2">№</label>
                   <input class="regform__input  regform__input--person-num" id="accompItemNum_2" name="accompItemNum_2" placeholder="2" readonly>
@@ -415,6 +415,28 @@
       ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
 
-    <script defer src="js/script.js"></script>
+     <script id="accomp-tpl" type="text/html">
+        <div class="regform__input-group  regform__input-group--accomp-num">
+          <label class="regform__label" for="accompItemNum_{{number}}">№</label>
+          <input class="regform__input  regform__input--person-num" id="accompItemNum_{{number}}" name="accompItemNum_{{number}}" placeholder="{{number}}" readonly>
+        </div>
+        <div class="regform__input-group regform__input-group--accomp-names">
+          <div class="regform__input-group  regform__input-group--accomp-name">
+            <label class="regform__label" for="accompItemName_{{number}}">Имя: *</label>
+            <input class="regform__input  regform__input--text  regform__input--person-name" id="accompItemName_{{number}}" type="text" name="accompItemName_{{number}}" placeholder="Введите имя" required>
+          </div>
+          <div class="regform__input-group  regform__input-group--accomp-name">
+            <label class="regform__label" for="accompItemNick_{{number}}">Прозвище:</label>
+            <input class="regform__input  regform__input--text" id="accompItemNick_{{number}}" type="text" name="accompItemNick_{{number}}" placeholder="Ну как же без этого!">
+          </div>
+        </div>
+        <div class="regform__delete-btn">Удалить</div>
+    </script>
+
+    <script defer src="js/vendors/moment-2.10.6.min.js"></script>
+    <script defer src="js/vendors/mustache-2.2.1.min.js"></script>
+    <script defer src="js/script-menu.js"></script>
+    <script defer src="js/script-dates.js"></script>
+    <script defer src="js/script-accomps.js"></script>
   </body>
 </html>
