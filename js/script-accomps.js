@@ -32,7 +32,7 @@
     var allItems = itemsContainer.querySelectorAll(".regform__input-group--accomp-set"),
         lastItem = allItems[allItems.length-1];
 
-    if(allItems.length <= 1) { return; }
+    if(allItems.length <= 0) { return; }
 
     lastItem.parentNode.removeChild(lastItem);
     updateIndexes();
