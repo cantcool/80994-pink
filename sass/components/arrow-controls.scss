@@ -9,11 +9,15 @@
     width: 21px;
     height: 41px;
     cursor: pointer;
+    fill: $text-color;
+    opacity: 0.3;
 
-    background: url("../img/review-arrow-right.svg") no-repeat;
+    &:hover {
+      opacity: 0.6;
+    }
 
-    &--prev {
-      background: url("../img/review-arrow-left.svg") no-repeat;
+    &:active {
+      opacity: 0.1;
     }
   }
 
