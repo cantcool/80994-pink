@@ -11,7 +11,7 @@
 
   @media (min-width: $screen-lg) {
     width: $screen-lg;
-    padding: 35px 20px 0px;
+    padding: 39px 20px 0px;
   }
 
   h3 {
@@ -48,6 +48,7 @@
 
   &__group {
     width: 100%;
+    // outline: 1px dotted red;
 
     @media (min-width: $screen-md) {
       width: 50%;
@@ -62,13 +63,13 @@
     }
   }
 
-  h4 {
+  &__cta {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0 2px;
+    margin: 13px 0 0px;
 
     @media (min-width: $screen-md) {
-      margin: 24px 0 4px;
+      margin: 24px 0 5px;
     }
 
     @media (min-width: $screen-lg) {
@@ -81,8 +82,9 @@
     font-size: 24px;
     font-weight: 300;
     line-height: 30px;
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     color: $accent-color;
+
     @media (min-width: $screen-md) {
       margin-bottom: 20px;
     }

@@ -89,9 +89,11 @@
   &:active {
     opacity: 0.3;
 
-    .logo__letters,
-    .logo__glasses {
-      fill: #fff;
+    &--white {
+      .logo__letters,
+      .logo__glasses {
+        fill: #fff;
+      }
     }
   }
 }

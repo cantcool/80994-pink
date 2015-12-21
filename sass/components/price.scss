@@ -9,7 +9,7 @@
 
   @media (min-width: $screen-md) {
     background-size: 100% 54px;
-    padding: 85px 0 60px;
+    padding: 87px 0 60px;
   }
 
   @media (min-width: $screen-lg) {
@@ -21,7 +21,6 @@
   &__wrap {
     margin: 0 auto;
     padding: 0;
-
     width: $screen-sm;
 
     @media (min-width: $screen-md) {
@@ -31,11 +30,10 @@
     @media (min-width: $screen-lg) {
       width: $screen-lg;
     }
-
   }
 
   &__slider-controls {
-    margin: 34px 0 0;
+    margin: 37px 0 0;
     @media (min-width: $screen-md) {
       display: none;
     }

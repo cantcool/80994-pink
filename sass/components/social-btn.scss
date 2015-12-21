@@ -6,14 +6,13 @@
   color: $accent-color;
   overflow: hidden;
   text-indent: -999px;
-
-
   border: 3px solid $input-border-color;
-  background-color: #fff;
   border-radius: 50%;
-  margin-right: 8px;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  margin-right: 7px;
 
   &:hover {
     border: 3px solid $text-color;
