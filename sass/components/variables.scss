@@ -1,22 +1,20 @@
 $screen-sm: 320px;
 $screen-md: 660px;
 $screen-lg: 960px;
+$min-width-xs: 320px;
 
 $menu-bg-color: #283645;
 $menu-bg-over-color: rgba(0, 0, 0, 0.3);
 $bg-grey-dark-color: #1d2631;
 $bg-grey-light-color: #f2f2f2;
 $bg-color: #fff;
-
 $dark-grey-color: #1d2631;
 $text-color: #fff;
 $outline-color: #fff;
-
 $text-color: #283645;
 $text-menu-color: #fff;
 $accent-color: #d22856;
 $link-color: $accent-color;
-
 $success-color: #2aab6d;
 
 $input-border-color: #e5e5e5;
@@ -24,12 +22,11 @@ $input-border-hover-color: $text-color;
 $input-corner-border-radius: 3px;
 $input-base-size: 60px;
 
+$form-side-padding: 20px;
+
 $logo-white-color: #fff;
 $logo-dark-color: $text-color;
 $logo-accent-color: $accent-color;
-
-
-$min-width-xs: 320px;
 
 $font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $font-weight: 400;

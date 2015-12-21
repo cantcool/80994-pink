@@ -1,12 +1,17 @@
 .regform {
   text-align: center;
 
+  form {
+    margin: 0 auto;
+    padding: 0;
+  }
+
   &__heading {
-    width: 88%;
+    margin: 0 auto;
+    width: $screen-sm;
+    padding: 45px 15px 20px;
     font-size: 14px;
     font-weight: normal;
-    margin: 46px auto 12px;
-
     text-align: center;
     line-height: 30px;
 
@@ -15,8 +20,8 @@
     }
 
     @media (min-width: $screen-md) {
-      width: 72%;
-      margin: 91px auto 12px;
+      width: $screen-md;
+      padding: 91px 60px 17px;
       font-size: 18px;
 
       &--additional {
@@ -25,19 +30,14 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: 66%;
-      margin-bottom: 45px;
+      width: $screen-lg;
+      padding: 91px 90px 17px;
     }
   }
 
-  form {
-    margin: 0 auto;
-    text-align: left;
-    width: 100%;
-  }
-
   &__fieldset {
-    margin: 0 auto;
+    // outline: 1px blue dashed;
+    margin: 0;
     padding: 0;
     width: 100%;
     border: 1px solid transparent;
@@ -50,45 +50,97 @@
     }
 
     @media (min-width: $screen-md) {
-      padding: 5px 5.5% 40px;
+      padding: 10px $form-side-padding 35px;
+
+      &--name {
+        padding: 5px 0 34px;
+      }
+
+      &--application {
+        padding: 5px 0 34px;
+      }
+
+      &--accomp {
+        padding: 10px 0 34px;
+      }
+
+      &--send {
+        padding: 10px 0 60px;
+      }
+
+
     }
 
     @media (min-width: $screen-lg) {
-      padding: 3px 10.8% 40px;
+      padding: 35px 10px 35px;
+
+      &--name {
+        padding: 35px 0 2px;
+      }
+
+      &--when {
+        padding: 10px 0 7px;
+      }
+
+      &--achievments {
+        padding: 10px 0 10px;
+      }
+
+      &--send {
+        padding: 28px 0 10px;
+      }
+
 
       &:last-child {
         padding-bottom: 0;
       }
-
     }
   }
 
   &__fieldset-body {
+    // outline: 1px dashed red;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 3px 6% 25px;
+    margin: 0 auto;
+    padding: 3px $form-side-padding 25px;
     position: relative;
-    width: 100%;
+    width: $screen-sm;
 
-    &--no-border {
-      padding: 3px 6% 44px;
+    &--name {
+      padding: 1px $form-side-padding 39px;
+    }
+
+    &--application {
+      padding: 0px $form-side-padding 25px;
+    }
+
+    &--when {
+      padding: 6px $form-side-padding 25px;
+    }
+
+    &--accomp {
+      padding: 3px $form-side-padding 22px;
+    }
+
+    &--photos {
+      padding: 12px $form-side-padding 5px;
     }
 
     &--send {
       flex-direction: column;
       justify-content: center;
-      padding: 50px 6% 0;
+      padding: 48px $form-side-padding 0;
     }
 
     @media (min-width: $screen-md) {
+      width: $screen-md - $form-side-padding * 2;
       padding: 33px 58px 38px;
       border: 2px solid $input-border-color;
       border-radius: $input-corner-border-radius;
 
-      &--no-border {
-        margin: 0;
-        padding: 0 0 0;
+      &--name {
+        width: $screen-md;
+        padding: 0 $form-side-padding 0;
         border: 1px solid transparent;
       }
 
@@ -97,26 +149,29 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 42px;
-        padding-bottom: 0px;
+        padding-bottom: 2px;
       }
 
       &--accomp {
-        padding-bottom: 38px;
+        padding-top: 38px;
+        padding-bottom: 31px;
       }
 
       &--achievments {
         padding-top: 28px;
-        padding-bottom: 25px;
+        padding-bottom: 27px;
       }
 
       &--photos {
         flex-direction: column;
         flex-wrap: wrap;
-        padding-top: 48px;
+        padding-top: 43px;
+        padding-bottom: 21px;
       }
 
       &--send {
-        padding-top: 22px;
+        padding: 17px 0 0;
+        border: 1px solid transparent;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -125,28 +180,47 @@
     }
 
     @media (min-width: $screen-lg) {
+      width: $screen-lg - 20;
       flex-direction: row;
       justify-content: space-between;
 
+      &--name {
+        padding: 0;
+      }
+
       &--application {
-        padding: 33px 0px 38px 58px;
+        padding: 33px 60px 38px 58px;
       }
 
       &--when {
         flex-wrap: nowrap;
+        padding-bottom: 0;
       }
 
       &--accomp {
         flex-direction: column;
-        padding-bottom: 58px;
+        padding-top: 36px;
+        padding-bottom: 52px;
       }
 
       &--achievments {
         flex-direction: column;
         flex-wrap: wrap;
-        align-content: space-between;
-        height: 230px;
-        padding-right: 10px;
+        justify-content: flex-start;
+        align-content: flex-start;
+        height: 229px;
+        // padding-right: 10px;
+      }
+
+      &--photos {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 43px;
+        padding-bottom: 56px;
+      }
+
+      &--send {
+        padding: 0 0 0;
       }
     }
   }
@@ -164,14 +238,15 @@
     }
 
     &--achievments {
-      margin: 44px 20px 16px;
+      @media (max-width: $screen-md) {
+        margin: 45px 30px 14px;
+      }
     }
 
     @media (min-width: $screen-md) {
 
       padding: 0 10px;
       margin: 0 0 0;
-
 
       span {
         z-index: 2;
@@ -181,76 +256,122 @@
         vertical-align: baseline;
         width: auto;
         margin: 0 auto;
-        padding: 0 28px;
+        padding: 0 20px;
         background: $bg-color;
       }
     }
   }
 
   &__input-group {
+    // outline: 1px dotted green;
     font-size: 0;
     position: relative;
     display: block;
-    margin: 0 0 0;
+    margin: 0;
     padding: 0;
     border: 1px solid transparent;
+
+    &--name {
+      margin: 0 0 5px 0;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 6px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 300px;
+      }
+    }
+
+    &--application {
+      @media (min-width: $screen-lg) {
+
+        &:nth-child(2) {
+          margin-left: 26px;
+          align-self: center;
+        }
+
+        &:nth-child(3) {
+          text-align: right;
+        }
+      }
+    }
+
+    &--when {
+      margin: 0 0 0;
+
+      @media (min-width: $screen-md) {
+        width: 240px;
+      }
+    }
+
+    &--when-range {
+      margin: 0 0 0;
+
+      @media (min-width: $screen-lg) {
+        width: 251px;
+      }
+    }
 
     &--divided {
       width: 100%;
       border-bottom: 2px solid $input-border-color;
-      margin: 10px 0 10px;
+      margin: 10px 0 14px;
       padding-bottom: 48px;
 
       @media (min-width: $screen-md) {
-        padding-bottom: 45px;
-        margin-top: 7px;
-        margin-bottom: 8px;
+        padding-bottom: 41px;
+        margin: 7px 0 14px;
       }
     }
 
     &--accomp-set {
+      position: relative;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-bottom: 16px;
+      margin: 2px 0 20px;
+      // outline: 2px dashed brown;
 
       @media (min-width: $screen-md) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-top: 0px;
+        margin-bottom: 20px;
       }
 
       @media (min-width: $screen-lg) {
         flex-wrap: nowrap;
-        margin-bottom: 0;
-       }
+        margin-bottom: 3px;
+      }
     }
 
     &--accomp-num {
+      z-index: 5;
       flex-basis: $input-base-size;
-      // min-width: auto !important; //reset mediaquery
 
       @media (min-width: $screen-md) {
         margin-right: 10px;
       }
 
       @media (min-width: $screen-md) {
-        margin-right: 20px;
+        margin-right: $form-side-padding;
       }
     }
 
     &--accomp-names {
       display: flex;
-
       flex-direction: column;
       flex-wrap: wrap;
-
       width: 100%;
+      left: -4px;
 
       @media (min-width: $screen-md) {
-        flex-grow: 1;
         width: auto;
+        left: auto;
+        flex-grow: 1;
       }
 
       @media (min-width: $screen-lg) {
@@ -260,43 +381,37 @@
       }
     }
 
-    &--name {
+    &--accomp-name {
       padding-right: 0px;
-      width: 100%;
+      padding-bottom: 3px;
+      width: 220px;
       @media (min-width: $screen-md) {
-        // width: 100%;
-        padding-right: 15px;
+        width: 100%;
+        padding-bottom: 3px;
       }
 
       @media (min-width: $screen-lg) {
-
-        padding-right: 20px;
+        width: 300px;
       }
     }
 
-    @media (min-width: $screen-md) {
-      //width: 300px;
-    }
+    &--achievments {
 
-    @media (min-width: $screen-lg) {
-      min-width: 250px;
-
-      &--wide {
-         min-width: 300px;
-      }
-
-      &--slim {
-         min-width: 242px;
+      @media (min-width: $screen-lg) {
+        height: 83px;
+        width: 310px;
       }
     }
+
   }
 
   &__label {
     display: block;
     font-size: $html-size-base;
+    line-height: 18px;
     color: $accent-color;
     text-transform: uppercase;
-    margin: 22px 22px 12px;
+    margin: 18px 20px 12px;
 
     &--under {
       margin: 14px 0 23px;
@@ -305,21 +420,22 @@
 
       @media (min-width: $screen-md) {
         text-align: left;
-        margin: 18px 22px 33px;
+        margin: 17px 20px 33px;
       }
 
       @media (min-width: $screen-lg) {
         text-align: left;
-        margin: 18px 22px 20px;
+        margin: 18px 22px $form-side-padding;
       }
     }
 
     &--centered {
+      margin-top: 17px;
       text-align: center;
-    }
 
-    @media (min-width: $screen-md) {
-      // margin: 40px 22px 12px;
+      // @media (min-width: $screen-md) {
+      //   margin-top: 15px;
+      // }
     }
   }
 
@@ -330,11 +446,14 @@
     width: 100%;
 
     @media (min-width: $screen-md) {
-      width: 240px;
+      width: 248px;
     }
 
     @media (min-width: $screen-lg) {
-      //width: 300px;
+      // &--when {
+      //   opacity: 0.5;
+      //   width: 252px;
+      // }
     }
   }
 
@@ -368,10 +487,22 @@
 
     &--decr {
       border-radius: $input-corner-border-radius 0 0 $input-corner-border-radius;
+
+      span {
+        display: block;
+        line-height: 40px;
+        height: 55px;
+      }
     }
 
     &--incr {
       border-radius: 0 $input-corner-border-radius $input-corner-border-radius 0;
+
+      span {
+        display: block;
+        line-height: 52px;
+        height: 55px;
+      }
     }
 
     &--accomp {
@@ -385,16 +516,16 @@
 
   &__delete-btn {
     display: none;
-
-    min-width: 100px;
+    // outline: 1px dashed yellow;
+    min-width: 115px;
     height: $input-base-size;
-    margin: 56px 0 0;
+    margin: 51px 0 0;
     padding: 0;
     text-transform: uppercase;
     font-size: 14px;
     line-height: $input-base-size;
     cursor: pointer;
-    // text-align: right !important; // mediaquery reset
+    text-align: right;
 
     &:hover {
       text-decoration: underline;
@@ -417,7 +548,11 @@
     text-transform: uppercase;
 
     @media (max-width: $screen-md) {
-      margin: 44px 0 0;
+      margin: 41px 0 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 0;
     }
 
     @media (min-width: $screen-lg) {
@@ -426,6 +561,7 @@
 
     &--attention {
       color: $accent-color;
+      margin-right: 3px;
     }
 
     &--additional {
@@ -433,12 +569,13 @@
 
       @media (min-width: $screen-lg) {
         display: inline;
+        margin-left: 4px;
+        margin-right: 3px;
       }
     }
   }
 
   &__photos-container {
-    // outline: 1px dotted red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -448,18 +585,127 @@
     width: 100%;
     font-size: 0px;
     border-top: 2px solid $input-border-color;
-    padding: 50px 0px 0;
+    padding: 34px 0 0;
+
+    @media (min-width: $screen-md) {
+      padding: 40px 0 0;
+    }
 
   }
 
   &__input {
-    margin: 0px 0px 0px;
-    padding: 16px 20px;
+    margin: 0;
+    padding: 15px 19px 17px;
     font-size: 18px;
     color: $text-color;
     font-weight: normal;
     border: 2px solid $input-border-color;
+    // border: 2px solid $accent-color;
     width: auto;
+
+    &--person-num {
+      display: block;
+      position: relative;
+      top: 1px;
+      padding-left: 22px;
+      background-color: $bg-grey-light-color;
+      width: $input-base-size;
+      height: $input-base-size;
+      font-size: 18px;
+      border-radius: $input-corner-border-radius 0 0 $input-corner-border-radius;
+
+      @media (min-width: $screen-md) {
+        position: static;
+        border-radius: $input-corner-border-radius;
+      }
+    }
+
+
+
+    &--text {
+      display: block;
+      width: 100%;
+      border-radius: $input-corner-border-radius;
+
+      &:hover {
+        border: 2px solid $input-border-hover-color;
+      }
+
+      &:focus,
+      &:active {
+        border: 2px solid $accent-color;
+      }
+    }
+
+    &--person-name {
+      @media (max-width: $screen-md) {
+        border-radius: 0 $input-corner-border-radius $input-corner-border-radius 0;
+      }
+    }
+
+    &--in-range {
+      display: inline-flex;
+      width: 20px;
+      text-align: center;
+      flex-grow: 1;
+      margin: 0;
+      border: 0px solid transparent;
+      border-top: 2px solid $input-border-color;
+      border-bottom: 2px solid $input-border-color;
+      border-radius: 0;
+
+
+    }
+
+    &--in-range-accomp {
+      background-color: $bg-grey-light-color;
+
+      @media (min-width: $screen-md) {
+        background-color: transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+
+      }
+    }
+
+    &--upload-btn-hidden {
+     display: none;
+    }
+
+    &--submit {
+      display: inline-block;
+      width: 100%;
+      height: 63px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: $success-color;
+      border: 1px solid transparent;
+      border-radius: $input-corner-border-radius;
+
+      @media (min-width: $screen-md) {
+        width: 300px;
+      }
+
+      &:hover {
+        background-color: darken($success-color, 3%);
+      }
+
+      &:active {
+        color: mix(darken(#fff, 10%), $success-color);
+      }
+
+      &:disabled {
+        background: $input-border-color;
+      }
+    }
+
+
+    &:focus {
+      outline: none;
+    }
 
     &::-webkit-input-placeholder  {
       color: $text-color;
@@ -477,121 +723,7 @@
       color: $text-color;
     }
 
-    &:focus {
-      outline: none;
-    }
 
-    &--person-num {
-      display: block;
-      position: relative;
-      top: 1px;
-      left: 5px;
-      // padding-left: 22px !important; // reset mediaquery
-      background-color: $bg-grey-light-color;
-      width: $input-base-size;
-      height: $input-base-size;
-      font-size: 18px;
-      border-radius: $input-corner-border-radius 0 0 $input-corner-border-radius;
-
-      @media (min-width: $screen-md) {
-        position: static;
-        border-radius: $input-corner-border-radius;
-      }
-    }
-
-    &--person-name {
-      margin-left: -2px;
-      display: inline-block;
-      vertical-align: top;
-      width: 218px;
-      border-radius: 0 $input-corner-border-radius $input-corner-border-radius 0;
-    }
-
-    &--text {
-      display: block;
-      width: 100%;
-      border-radius: $input-corner-border-radius;
-
-      &:hover {
-        border: 2px solid $input-border-hover-color;
-      }
-
-      &:focus,
-      &:active {
-        border: 2px solid $accent-color;
-      }
-
-
-
-
-    }
-
-    &--in-range {
-      display: inline-flex;
-      width: 20px;
-      text-align: center;
-      flex-grow: 1;
-      margin: 0;
-      border: 0px solid transparent;
-      border-top: 2px solid $input-border-color;
-      border-bottom: 2px solid $input-border-color;
-      border-radius: 0;
-    }
-
-    &--in-range-accomp {
-      background-color: $bg-grey-light-color;
-
-      @media (min-width: $screen-md) {
-        background-color: transparent;
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent;
-      }
-    }
-
-    &--upload-btn-hidden {
-     display: none;
-    }
-
-
-
-
-
-    &--submit {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-      background-color: $success-color;
-      border: 1px solid transparent;
-      border-radius: $input-corner-border-radius;
-
-      @media (min-width: $screen-md) {
-         width: 296px;
-      }
-
-      &:hover {
-        background-color: darken($success-color, 3%);
-      }
-
-      &:active {
-        color: mix(darken(#fff, 10%), $success-color);
-      }
-
-      &:disabled {
-        background: $input-border-color;
-      }
-
-
-    }
-
-
-
-    @media (min-width: $screen-md) {
-      padding: 16px 19px;
-    }
 
     &[type="checkbox"],
     &[type="radio"] {
@@ -607,7 +739,7 @@
       text-transform: none;
       font-size: 18px;
       line-height: 30px;
-      margin: 21px 10px 21px 58px;
+      margin: 21px 0 21px 58px;
       padding: 0;
     }
 
@@ -689,10 +821,9 @@
 
   &__upload-btn-label {
     display: block;
-
-    width: 100%; // mediaquery reset
-    padding: 16px 20px;
-    margin-bottom: 50px;
+    width: 100%;
+    padding: 16px $form-side-padding;
+    margin-bottom: 36px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -704,9 +835,9 @@
 
     cursor: pointer;
 
-    // @media (min-width: $screen-md) {
-    //    width: 296px;
-    // }
+    @media (min-width: $screen-md) {
+       margin-bottom: 42px;
+    }
 
     // @media (min-width: $screen-md) {
     //    width: 296px;

@@ -27,6 +27,8 @@
   }
 
   &__copyrights {
+
+
     width: $screen-sm;
     margin: 0 auto;
     display: flex;
@@ -34,7 +36,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 300px;
-    padding: 68px 0 35px;
+    padding: 60px 0 42px;
 
 
 
@@ -56,10 +58,14 @@
   }
 
   &__social {
-    margin-top: 36px;
+    // outline: 1px dashed black;
     align-self: center;
+    margin-top: 39px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+
     @media (min-width: $screen-md) {
-      margin-top: 0;
+      margin-top: 4px;
       margin-left: -12px;
     }
 
@@ -70,7 +76,7 @@
   }
 
   &__htmlacademy {
-    margin-top: 30px;
+    margin-top: 32px;
 
     .logo-path {
       fill: $accent-color;
@@ -92,6 +98,7 @@
     @media (min-width: $screen-md) {
       margin-top: 3px;
     }
+
     @media (min-width: $screen-lg) {
       margin-top: 10px;
       font-size: 18px;

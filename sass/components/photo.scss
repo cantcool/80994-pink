@@ -2,17 +2,25 @@
   &__item {
     position: relative;
     display: inline-block;
+    margin: 0 38px 20px 0;
 
-    // outline: 1px dashed cyan;
-
-    margin: 0 4% 18px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     @media(min-width: $screen-md) {
-      margin: 0 4% 41px;
+      margin: 25px 69px 25px 0;
     }
 
     @media(min-width: $screen-lg) {
-      margin: 0 4% 21px;
+      margin: 26px 55px 0 0;
+
+      &:nth-child(3n) {
+        margin-right: 55px;
+      }
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
     }
 
 
@@ -62,8 +70,12 @@
       font-size: 12px;
       text-transform: uppercase;
       margin: 0;
-      padding-right: 2px;
-      padding-top: 8px;
+      padding: 8px 0 0;
+
+      @media(min-width: $screen-md) {
+         font-size: 14px;
+         padding: 13px 0 0;
+      }
     }
   }
 
