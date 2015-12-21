@@ -23,35 +23,6 @@
       }
     }
 
-
-    &:before {
-      position: absolute;
-      top: -14px;
-      left: 50px;
-      display: block;
-      border: 2px solid $input-border-color;
-
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      content: '';
-      background-image: url("../img/delete-cross.svg");
-      background-size: 10px 10px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #fff;
-
-      cursor: pointer;
-
-      @media(min-width: $screen-md) {
-        top: -25px;
-        left: 92px;
-        width: 55px;
-        height: 55px;
-        background-size: 18px 18px;
-      }
-    }
-
     img {
       display: block;
       width: 68px;
@@ -75,6 +46,66 @@
       @media(min-width: $screen-md) {
          font-size: 14px;
          padding: 13px 0 0;
+      }
+    }
+  }
+
+  &__delete-btn {
+    position: absolute;
+    top: -14px;
+    left: 50px;
+    display: block;
+    border: 2px solid $input-border-color;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    content: '';
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+
+    @media(min-width: $screen-md) {
+      top: -25px;
+      left: 92px;
+      width: 55px;
+      height: 55px;
+      background-size: 18px 18px;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      top: -2px;
+      left: -2px;
+      width: 32px;
+      height: 32px;
+      content: '';
+      background-color: $input-border-color;
+      mask: url("../img/delete-cross.svg") no-repeat 50% 50%;
+      mask-size: 10px 10px;
+      cursor: pointer;
+
+      @media(min-width: $screen-md) {
+        width: 55px;
+        height: 55px;
+        mask-size: 20px 20px;
+      }
+    }
+
+    &:hover {
+      border-color: $text-color;
+
+      &:after {
+        background-color: $text-color;
+      }
+    }
+
+    &:active {
+      border-color: $text-color;
+      background-color: $text-color;
+
+      &:after {
+        background-color: #fff;
       }
     }
   }
