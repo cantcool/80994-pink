@@ -23,6 +23,35 @@
       }
     }
 
+
+    // &:before {
+    //   position: absolute;
+    //   top: -14px;
+    //   left: 50px;
+    //   display: block;
+    //   border: 2px solid $input-border-color;
+
+    //   border-radius: 50%;
+    //   width: 32px;
+    //   height: 32px;
+    //   content: '';
+    //   background-image: url("../img/delete-cross.svg");
+    //   background-size: 10px 10px;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-color: #fff;
+
+    //   cursor: pointer;
+
+    //   @media(min-width: $screen-md) {
+    //     top: -25px;
+    //     left: 92px;
+    //     width: 55px;
+    //     height: 55px;
+    //     background-size: 18px 18px;
+    //   }
+    // }
+
     img {
       display: block;
       width: 68px;
@@ -109,6 +138,7 @@
       }
     }
   }
+
 
 
 }
