@@ -2,6 +2,7 @@
   &__item {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     margin: 0 38px 20px 0;
 
     &:nth-child(3n) {
@@ -22,35 +23,6 @@
         margin-right: 0;
       }
     }
-
-
-    // &:before {
-    //   position: absolute;
-    //   top: -14px;
-    //   left: 50px;
-    //   display: block;
-    //   border: 2px solid $input-border-color;
-
-    //   border-radius: 50%;
-    //   width: 32px;
-    //   height: 32px;
-    //   content: '';
-    //   background-image: url("../img/delete-cross.svg");
-    //   background-size: 10px 10px;
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-color: #fff;
-
-    //   cursor: pointer;
-
-    //   @media(min-width: $screen-md) {
-    //     top: -25px;
-    //     left: 92px;
-    //     width: 55px;
-    //     height: 55px;
-    //     background-size: 18px 18px;
-    //   }
-    // }
 
     img {
       display: block;
@@ -139,7 +111,4 @@
       }
     }
   }
-
-
-
 }

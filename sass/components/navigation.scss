@@ -19,7 +19,6 @@
     padding: 20px 19px 0;
     font-size: 0;
 
-
     @media (min-width: $screen-md) {
       width: $screen-md;
       height: 110px;
@@ -30,7 +29,6 @@
       // outline: 3px dotted cyan;
       width: $screen-lg;
       padding: 34px 9px 0;
-      // justify-content: flex-start;
     }
   }
 
@@ -124,7 +122,6 @@
         opacity: 0.3;
         border-bottom: 2px solid transparent;
       }
-
     }
   }
 

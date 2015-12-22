@@ -9,7 +9,6 @@
   background-position: 50% 0px;
   background-size: 700px 488px;
   background-color: $dark-grey-color;
-  // overflow: hidden;
   width: 100%;
 
   @media (min-resolution: 1.5dppx) {
@@ -40,10 +39,6 @@
 
   &--main {
     height: 728px;
-
-    @media (min-width: $screen-md) {
-      //height: 728px;
-    }
 
     @media (min-width: $screen-lg) {
       height: 854px;
@@ -103,7 +98,6 @@
     @media (min-resolution: 2.5dppx) {
       background-image: url("../img/iphone-hand-mobile@3x.png")
     }
-
 
     @media (min-width: $screen-md) {
       top: 75px;
@@ -174,5 +168,4 @@
       }
     }
   }
-
 }

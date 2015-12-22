@@ -67,8 +67,6 @@
       &--send {
         padding: 10px 0 60px;
       }
-
-
     }
 
     @media (min-width: $screen-lg) {
@@ -89,7 +87,6 @@
       &--send {
         padding: 28px 0 10px;
       }
-
 
       &:last-child {
         padding-bottom: 0;
@@ -244,7 +241,6 @@
     }
 
     @media (min-width: $screen-md) {
-
       padding: 0 10px;
       margin: 0 0 0;
 
@@ -396,7 +392,6 @@
     }
 
     &--achievments {
-
       @media (min-width: $screen-lg) {
         height: 83px;
         width: 310px;
@@ -432,10 +427,6 @@
     &--centered {
       margin-top: 17px;
       text-align: center;
-
-      // @media (min-width: $screen-md) {
-      //   margin-top: 15px;
-      // }
     }
   }
 
@@ -447,13 +438,6 @@
 
     @media (min-width: $screen-md) {
       width: 248px;
-    }
-
-    @media (min-width: $screen-lg) {
-      // &--when {
-      //   opacity: 0.5;
-      //   width: 252px;
-      // }
     }
   }
 
@@ -510,8 +494,6 @@
         border-radius: $input-corner-border-radius;
       }
     }
-
-
   }
 
   &__delete-btn {
@@ -539,6 +521,7 @@
 
     @media (min-width: $screen-md) {
       display: inline-block;
+      vertical-align: baseline;
     }
   }
 
@@ -580,8 +563,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    // align-content: flex-start;
-
     width: 100%;
     font-size: 0px;
     border-top: 2px solid $input-border-color;
@@ -590,7 +571,6 @@
     @media (min-width: $screen-md) {
       padding: 40px 0 0;
     }
-
   }
 
   &__input {
@@ -600,7 +580,6 @@
     color: $text-color;
     font-weight: normal;
     border: 2px solid $input-border-color;
-    // border: 2px solid $accent-color;
     width: auto;
 
     &--person-num {
@@ -619,8 +598,6 @@
         border-radius: $input-corner-border-radius;
       }
     }
-
-
 
     &--text {
       display: block;
@@ -653,8 +630,6 @@
       border-top: 2px solid $input-border-color;
       border-bottom: 2px solid $input-border-color;
       border-radius: 0;
-
-
     }
 
     &--in-range-accomp {
@@ -664,7 +639,6 @@
         background-color: transparent;
         border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
-
       }
     }
 
@@ -674,6 +648,7 @@
 
     &--submit {
       display: inline-block;
+      vertical-align: baseline;
       width: 100%;
       height: 63px;
       text-align: center;
@@ -702,7 +677,6 @@
       }
     }
 
-
     &:focus {
       outline: none;
     }
@@ -722,8 +696,6 @@
     :-ms-input-placeholder {
       color: $text-color;
     }
-
-
 
     &[type="checkbox"],
     &[type="radio"] {
@@ -771,6 +743,7 @@
     &[type="checkbox"] + label {
       position: static;
       display: inline-block;
+      vertical-align: baseline;
       color: $text-color;
       text-transform: none;
       font-size: 18px;
@@ -831,16 +804,11 @@
     background-color: #fff;
     border: 2px solid $input-border-color;
     border-radius: $input-corner-border-radius;
-
     cursor: pointer;
 
     @media (min-width: $screen-md) {
        margin-bottom: 42px;
     }
-
-    // @media (min-width: $screen-md) {
-    //    width: 296px;
-    // }
 
     &:hover {
       border-color: $input-border-hover-color;
