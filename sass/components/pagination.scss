@@ -33,7 +33,7 @@
 
   input[type='radio']:checked + label:before {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
     content: '';
     height: 12px;
     width: 12px;
