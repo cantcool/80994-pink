@@ -8,8 +8,6 @@
     <link style="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-
     <svg id="pinkSVGLogoConstructorSprite" style="display: none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <symbol id="logoPink__letters">
@@ -97,7 +95,6 @@
         </symbol>
       </defs>
     </svg>
-
     <svg id="pinkSVGItemsSprite" style="display: none" xmlns="http://www.w3.org/2000/svg">
       <symbol id="burger-closed">
         <path d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671
@@ -179,8 +176,6 @@
       </div>
 
     </header>
-
-
 
     <div class="regform">
       <h2 class="regform__heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="regform__heading--additional">Пожалуйста, заполните форму ниже:</span></h2>
@@ -341,7 +336,7 @@
               <div class="photo__item" id="userPhotoItem_007"><img class="photo__img" src="img/TEMP_userPhoto.jpg" width="67" height="67" alt=""><span>IMG-7.jpg</span><button class="photo__delete-btn">Удалить фото</button></div>
               <div class="photo__item" id="userPhotoItem_008"><img class="photo__img" src="img/TEMP_userPhoto.jpg" width="67" height="67" alt=""><span>IMG-8.jpg</span><button class="photo__delete-btn">Удалить фото</button></div>
             </div>
-                    </div>
+            </div>
           </div>
           <div class="regform__fieldset  regform__fieldset--send">
             <div class="regform__fieldset-body  regform__fieldset-body--send">
@@ -384,8 +379,6 @@
                 <use class="logo__glasses" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logoPink__glasses--starred"></use>
                 <use class="logo__glasses-stars" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logoPink__glasses-stars"></use>
               </svg>
-
-
           </div>
 
         </a>
@@ -405,8 +398,6 @@
         </a>
       </div>
     </div>
-
-
     </footer>
 
     <script>
@@ -415,21 +406,21 @@
     </script>
 
      <script id="accomp-tpl" type="text/html">
-        <div class="regform__input-group  regform__input-group--accomp-num">
-          <label class="regform__label" for="accompItemNum_{{number}}">№</label>
-          <input class="regform__input  regform__input--person-num" id="accompItemNum_{{number}}" name="accompItemNum_{{number}}" placeholder="{{number}}" readonly>
+      <div class="regform__input-group  regform__input-group--accomp-num">
+        <label class="regform__label" for="accompItemNum_{{number}}">№</label>
+        <input class="regform__input  regform__input--person-num" id="accompItemNum_{{number}}" name="accompItemNum_{{number}}" placeholder="{{number}}" readonly>
+      </div>
+      <div class="regform__input-group regform__input-group--accomp-names">
+        <div class="regform__input-group  regform__input-group--accomp-name">
+          <label class="regform__label" for="accompItemName_{{number}}">Имя: *</label>
+          <input class="regform__input  regform__input--text  regform__input--person-name" id="accompItemName_{{number}}" type="text" name="accompItemName_{{number}}" placeholder="Введите имя" required>
         </div>
-        <div class="regform__input-group regform__input-group--accomp-names">
-          <div class="regform__input-group  regform__input-group--accomp-name">
-            <label class="regform__label" for="accompItemName_{{number}}">Имя: *</label>
-            <input class="regform__input  regform__input--text  regform__input--person-name" id="accompItemName_{{number}}" type="text" name="accompItemName_{{number}}" placeholder="Введите имя" required>
-          </div>
-          <div class="regform__input-group  regform__input-group--accomp-name">
-            <label class="regform__label" for="accompItemNick_{{number}}">Прозвище:</label>
-            <input class="regform__input  regform__input--text" id="accompItemNick_{{number}}" type="text" name="accompItemNick_{{number}}" placeholder="Ну как же без этого!">
-          </div>
+        <div class="regform__input-group  regform__input-group--accomp-name">
+          <label class="regform__label" for="accompItemNick_{{number}}">Прозвище:</label>
+          <input class="regform__input  regform__input--text" id="accompItemNick_{{number}}" type="text" name="accompItemNick_{{number}}" placeholder="Ну как же без этого!">
         </div>
-        <div class="regform__delete-btn">Удалить</div>
+      </div>
+      <div class="regform__delete-btn">Удалить</div>
     </script>
 
     <script defer src="js/vendors/mustache-2.2.1.min.js"></script>
