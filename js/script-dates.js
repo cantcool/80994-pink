@@ -1,5 +1,4 @@
 (function init() { "use strict";
-
   if (!document.querySelector("#dates-range")) {
     return;
   };
@@ -61,6 +60,4 @@
       item.required = false;
     });
   }
-
-
 })();

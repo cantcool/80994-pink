@@ -1,5 +1,4 @@
 (function init() { "use strict";
-
   if (!document.querySelector("#accomp-range")) {
     return;
   };
@@ -94,7 +93,4 @@
       item.required = false;
     });
   }
-
-
-
 })();
