@@ -6,7 +6,6 @@
   background-color: $menu-bg-over-color;
   width: 100%;
 
-
   @media (min-width: $screen-md) {
     height: 110px;
   }
@@ -49,7 +48,6 @@
     line-height: 20px;
     width: 100%;
 
-
     @media (min-width: $screen-md) {
       padding-top: 110px;
     }
@@ -68,11 +66,13 @@
       padding-right: 0px;
       background-color: transparent;
     }
+
+    &--js-displayed {
+      display: block;
+    }
   }
 
-  &__list--js-visible {
-    display: block;
-  }
+
 
   &__item {
     display: block;
@@ -89,11 +89,8 @@
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       height: 110px;
-
     }
   }
-
-
 
   &__link {
     display: block;
@@ -134,10 +131,6 @@
   &__logo-wrap {
     z-index: 10;
     float: left;
-
-    @media (min-width: $screen-lg) {
-      // margin-left: 10px;
-    }
   }
 
   &__hamburger-wrap {
@@ -148,7 +141,6 @@
     width: 50px;
     cursor: pointer;
     align-self: center;
-    // outline: 1px dashed green;
 
     .hamburger-item {
       fill: $text-menu-color;
@@ -177,6 +169,7 @@
     position: absolute;
 
     &--open {
+      display: block;
       width: 50px;
       height: 24px;
     }
@@ -187,16 +180,13 @@
       height: 24px;
       width: 24px;
     }
-  }
 
-
-  .js-toggle-hamburger-icons {
-    .navigation__hamburger-icon--open {
-      display: none;
+    &--js-displayed {
+      display: block;
     }
 
-    .navigation__hamburger-icon--close {
-      display: block;
+    &--js-hided {
+      display: none;
     }
   }
 }

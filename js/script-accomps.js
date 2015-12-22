@@ -14,7 +14,7 @@
       itemsAmount = parseInt(itemsAmountInput.getAttribute("placeholder"));
 
   initControls();
-  disableRequiringOfItemsForDebug();
+  // disableRequiringOfItemsForDebug();
 
   function initControls() {
     decrBtn.addEventListener("click", removeLastItem);

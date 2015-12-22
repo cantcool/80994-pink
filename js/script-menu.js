@@ -1,12 +1,16 @@
 (function init() { "use strict";
-  var hamburger = document.querySelector("#hamburger");
-  var naviMenu = document.querySelector("#navigationMenu");
-
+  var hamburger = document.querySelector("#hamburger"),
+      hamburgerOpenBtn = hamburger.querySelector("#hamburger_open"),
+      hamburgerCloseBtn = hamburger.querySelector("#hamburger_close"),
+      naviMenu = document.querySelector("#navigationMenu");
 
   hamburger.addEventListener("click", function(e) {
     e.preventDefault();
-    naviMenu.classList.toggle("navigation__list--js-visible");
-    hamburger.classList.toggle("js-toggle-hamburger-icons");
+
+    hamburgerOpenBtn.classList.toggle("navigation__hamburger-icon--js-hided");
+    hamburgerCloseBtn.classList.toggle("navigation__hamburger-icon--js-displayed");
+
+    naviMenu.classList.toggle("navigation__list--js-displayed");
   })
 
 })();

@@ -11,9 +11,7 @@
       daysDurationInput = controls.querySelector("#dates-duration"),
       daysDuration = parseInt(daysDurationInput.getAttribute("placeholder"));
 
-  // console.log(daysDuration);
-
-  disableRequiringOfItemsForDebug();
+  // disableRequiringOfItemsForDebug();
   initControls();
 
   function initControls() {
