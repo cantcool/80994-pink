@@ -5,11 +5,11 @@
 
   var _form = document.querySelector("#reg_form"),
       controls = _form.querySelector("#accomp-range"),
-      decrBtn = controls.querySelector("#accomp_decr"),
-      incrBtn = controls.querySelector("#accomp_incr"),
+      decrBtn = controls.querySelector("#accomp-decr"),
+      incrBtn = controls.querySelector("#accomp-incr"),
       itemsContainer = _form.querySelector("#accompMembers_group"),
       itemTemplate = document.querySelector("#accomp-tpl").innerHTML,
-      itemsAmountInput = controls.querySelector("#accomp_quantity"),
+      itemsAmountInput = controls.querySelector("#accomp-quantity"),
       itemsAmount = parseInt(itemsAmountInput.getAttribute("placeholder"));
 
   initControls();
@@ -80,6 +80,7 @@
         fieldsNumber = fields.length;
 
     itemsAmount = fieldsNumber;
+    itemsAmountInput.value = '';
     itemsAmountInput.setAttribute("placeholder", itemsAmount + ' чел');
 
     for (i = 0; i < fieldsNumber; i++) {

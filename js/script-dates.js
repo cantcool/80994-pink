@@ -37,6 +37,7 @@
   }
 
   function updateDays() {
+    daysDurationInput.value = '';
     daysDurationInput.setAttribute("placeholder", daysDuration + " " + numberToDaysWord( daysDuration ).toLowerCase() );
   }
 
