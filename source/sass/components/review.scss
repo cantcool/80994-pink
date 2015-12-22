@@ -1,0 +1,139 @@
+.review {
+  position: relative;
+
+  display: block;
+  width: min-width-xs;
+  padding: 22px 0 40px;
+  overflow: hidden;
+
+  font-size: 0;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 165px;
+
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 70px;
+  }
+
+  &__content {
+    width: $screen-sm;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      width: $screen-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: $screen-lg;
+      margin: 0 auto 15px;
+      padding: 0 80px 0;
+    }
+  }
+
+  &__controls-markers {
+    margin: 16px 0 0;
+
+    @media (min-width: $screen-md) {
+      margin: 26px 0 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__controls-arrows {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+
+      display: block;
+      width: $screen-lg;
+      margin-left: - $screen-lg / 2;
+      padding: 10px;
+    }
+  }
+
+  &__block {
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px;
+
+    vertical-align: top;
+    // outline: 1px dashed green;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+
+    h4 {
+      margin: 24px 0 2px;
+
+      font-weight: bold;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+
+      p {
+        order: -1;
+
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      h4 {
+        margin: 18px 0 0;
+
+        font-size: 20px;
+      }
+
+      h5 {
+        margin: 10px 0 12px;
+
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0 10px 0;
+
+      h4 {
+        margin: 16px 0 0;
+
+        font-size: 24px;
+      }
+
+      h5 {
+        margin: 4px 0 12px;
+
+        font-size: 18px;
+      }
+
+      p {
+        padding: 3px 10px 0 0;
+      }
+    }
+  }
+}

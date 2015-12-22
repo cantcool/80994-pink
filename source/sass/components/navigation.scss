@@ -1,0 +1,210 @@
+.navigation {
+  position: relative;
+  z-index: 90;
+
+  width: 100%;
+  width: 100%;
+  height: 66px;
+
+  background-color: $menu-bg-over-color;
+
+  @media (min-width: $screen-md) {
+    height: 110px;
+  }
+
+  &__wrap {
+    position: relative;
+
+    width: $screen-sm;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 19px 0;
+
+    font-size: 0;
+
+    border: 1px solid transparent;
+
+    @media (min-width: $screen-md) {
+      width: $screen-md;
+      height: 110px;
+      padding: 34px 19px 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      // outline: 3px dotted cyan;
+      width: $screen-lg;
+      padding: 34px 9px 0;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 66px;
+
+    list-style: none;
+    line-height: 20px;
+
+    background-color: $menu-bg-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 110px;
+    }
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: auto;
+
+      display: flex;
+      justify-content: flex-end;
+      align-self: flex-end;
+      margin: 0;
+      padding-top: 0;
+      padding-right: 0;
+
+      background-color: transparent;
+    }
+
+    &--js-displayed {
+      display: block;
+    }
+  }
+
+
+
+  &__item {
+    display: block;
+    height: 65px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000000;
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+      height: 110px;
+      margin-left: 48px;
+      padding: 33px 10px;
+
+      vertical-align: middle;
+
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-weight: bold;
+    font-size: $html-size-menu;
+    line-height: 60px;
+    color: $text-menu-color;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 10px 0;
+
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+      text-transform: none;
+
+      &:hover {
+        color: inherit;
+
+        border-bottom: 2px solid white;
+      }
+
+      &:active {
+        border-bottom: 2px solid transparent;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__logo-wrap {
+    z-index: 10;
+
+    float: left;
+  }
+
+  &__hamburger-wrap {
+    position: relative;
+
+    align-self: center;
+    float: right;
+    width: 50px;
+    height: 24px;
+    margin: 0;
+
+    cursor: pointer;
+
+    .hamburger-item {
+      fill: $text-menu-color;
+    }
+
+    &:hover {
+      .hamburger-item {
+        fill: $accent-color;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__hamburger-icon {
+    position: absolute;
+
+    &--open {
+      display: block;
+      width: 50px;
+      height: 24px;
+    }
+
+    &--close {
+      right: 0;
+
+      display: none;
+      width: 24px;
+      height: 24px;
+    }
+
+    &--js-displayed {
+      display: block;
+    }
+
+    &--js-hided {
+      display: none;
+    }
+  }
+}

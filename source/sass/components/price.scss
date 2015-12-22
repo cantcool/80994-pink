@@ -1,0 +1,45 @@
+.price {
+  display: block;
+  padding: 90px 0 47px;
+
+  text-align: center;
+
+  background: url("../img/triangle-white.svg") no-repeat 0 0;
+  background-color: $bg-grey-light-color;
+  background-size: 100% 28px;
+  //outline: 1px dashed green;
+
+  @media (min-width: $screen-md) {
+    padding: 87px 0 60px;
+
+    background-size: 100% 54px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 145px 0 85px;
+
+    background-size: 100% 75px;
+  }
+
+
+  &__wrap {
+    width: $screen-sm;
+    margin: 0 auto;
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+      width: $screen-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: $screen-lg;
+    }
+  }
+
+  &__slider-controls {
+    margin: 37px 0 0;
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+}

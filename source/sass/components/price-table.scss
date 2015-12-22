@@ -1,0 +1,164 @@
+.price-table {
+  display: table;
+  min-width: 840px;
+  margin: 0 auto 10px;
+
+  @media (max-width: $screen-md) {
+    margin-left: -260px;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  td {
+    height: 61px;
+    padding: 15px 19px 15px 22px;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+
+  th:nth-of-type(1),
+  td:nth-of-type(1) {
+    display: none;
+
+    text-align: left;
+  }
+
+  &__header {
+    display: table-cell;
+    height: 98px;
+
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: #283645;
+    border: 2px solid #e5e5e5;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &--highlighted {
+      background-image: url("../img/price_hit.png");
+      background-repeat: no-repeat;
+      background-position: 0 -1px;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-top: 4px;
+
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  &--empty {
+    border: 1px solid transparent;
+    visibility: hidden;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 30px;
+
+    font-size: 0;
+    vertical-align: middle;
+
+    &--yes {
+      width: 30px;
+      height: 22px;
+
+      background-image: url("data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzMC4zNzVweCIgaGVpZ2h0PSIyMS42ODhweCIgdmlld0JveD0iMCAwIDMwLjM3NSAyMS42ODgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwLjM3NSAyMS42ODgiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjM2RjNjQ0IiBkPSJNMjkuOTM2LDAuNDM5Yy0wLjU4Ni0wLjU4Ni0xLjUzNS0wLjU4Ni0yLjEyMSwwTDEwLjE4OCwxOC4wNjZsLTcuNjI3LTcuNjI3Yy0wLjU4Ni0wLjU4Ni0xLjUzNS0wLjU4Ni0yLjEyMSwwCglzLTAuNTg2LDEuNTM1LDAsMi4xMjFsOC42ODgsOC42ODhjMC4yOTMsMC4yOTMsMC42NzcsMC40MzksMS4wNjEsMC40MzlzMC43NjgtMC4xNDYsMS4wNjEtMC40MzlMMjkuOTM2LDIuNTYxCglDMzAuNTIxLDEuOTc1LDMwLjUyMSwxLjAyNSwyOS45MzYsMC40Mzl6Ii8+Cjwvc3ZnPg==");
+      background-repeat: no-repeat;
+    }
+
+    &--no {
+      width: 27px;
+      height: 28px;
+
+      background-image: url("data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyNi43NTJweCIgaGVpZ2h0PSIyNi43NTJweCIgdmlld0JveD0iMCAwIDI2Ljc1MiAyNi43NTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2Ljc1MiAyNi43NTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjZjI1YjI2IiBkPSJNMTUuNDk3LDEzLjM3NkwyNi4zMTIsMi41NjJjMC41ODYtMC41ODUsMC41ODYtMS41MzUsMC0yLjEyMXMtMS41MzUtMC41ODYtMi4xMjEsMEwxMy4zNzYsMTEuMjU1TDIuNTYyLDAuNDM5CgljLTAuNTg2LTAuNTg2LTEuNTM1LTAuNTg2LTIuMTIxLDBjLTAuNTg2LDAuNTg1LTAuNTg2LDEuNTM1LDAsMi4xMjFsMTAuODE0LDEwLjgxNUwwLjQzOSwyNC4xOWMtMC41ODYsMC41ODYtMC41ODYsMS41MzUsMCwyLjEyMQoJYzAuMjkzLDAuMjkzLDAuNjc3LDAuNDM5LDEuMDYxLDAuNDM5czAuNzY4LTAuMTQ2LDEuMDYxLTAuNDM5bDEwLjgxNS0xMC44MTRMMjQuMTksMjYuMzEyYzAuMjkzLDAuMjkzLDAuNjc3LDAuNDM5LDEuMDYxLDAuNDM5CglzMC43NjgtMC4xNDYsMS4wNjEtMC40MzljMC41ODYtMC41ODYsMC41ODYtMS41MzUsMC0yLjEyMUwxNS40OTcsMTMuMzc2eiIvPgo8L3N2Zz4=");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    min-width: 620px;
+
+    font-size: 14px;
+
+    &__header {
+      height: 80px;
+
+      font-size: 16px;
+
+      &--highlighted {
+        background-position: -6px -9px;
+      }
+    }
+
+    &__price {
+      font-size: 18px;
+    }
+
+    &__content {
+      display: none;
+    }
+
+    &__checkbox {
+      float: none;
+    }
+
+    td {
+      width: 154px;
+      height: 46px;
+      padding: 8px 16px;
+
+      text-align: center;
+      text-transform: none;
+    }
+
+    th:nth-of-type(1),
+    td:nth-of-type(1) {
+      display: table-cell;
+      width: 155px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    min-width: 940px;
+
+    font-size: 18px;
+
+    &__header {
+      height: 98px;
+
+      font-size: 18px;
+
+      &--highlighted {
+        background-position: 0 -1px;
+      }
+    }
+
+    &__price {
+      font-size: 24px;
+    }
+
+    td {
+      width: auto;
+      padding: 16px 22px;
+    }
+
+    th:nth-of-type(1),
+    td:nth-of-type(1) {
+      display: table-cell;
+      width: 235px;
+    }
+  }
+}

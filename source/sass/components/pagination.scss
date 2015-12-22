@@ -1,0 +1,52 @@
+.pagination {
+  font-size: 10px;
+
+  input[type="radio"] {
+    display: none;
+    margin: 5px;
+
+    cursor: pointer;
+    opacity: 0.1;
+  }
+
+  input[type="radio"] + label {
+    padding: 7px;
+
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label:before {
+    content: "";
+
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+
+    vertical-align: middle;
+
+    background-color: #b5b9be;
+    border-radius: 50%;
+  }
+
+  input[type="radio"] + label:hover:before {
+    background-color: #7e868f;
+  }
+
+  input[type="radio"] + label:active:before {
+    background-color: #e9ebec;
+  }
+
+  input[type="radio"]:checked + label:before {
+    content: "";
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    vertical-align: middle;
+
+    background-color: #ffffff;
+    border: 3px solid #283645;
+    border-radius: 50%;
+  }
+}

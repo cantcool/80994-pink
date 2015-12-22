@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  min-width: $screen-sm;
+  margin: 0 auto;
+  padding: 0;
+
+  font-weight: $font-weight;
+  font-size: $html-size-base;
+  font-family: $font-family;
+  color: $text-color;
+
+  background-color: $bg-color;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}

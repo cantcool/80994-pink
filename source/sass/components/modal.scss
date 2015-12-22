@@ -1,0 +1,123 @@
+.modal {
+  position: fixed;
+  z-index: 400;
+
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px 50px;
+
+  text-align: center;
+
+  background-color: $bg-color;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+
+  &--ok {
+    top: 50%;
+    left: 0;
+
+    display: none;
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, $bg-color 58%, $bg-grey-light-color 58%);
+    transform: translate(0, -50%);
+
+    @media (min-width: $screen-md) {
+      left: 50%;
+
+      width: 460px;
+      padding: 25px 60px 50px;
+
+      background-image: linear-gradient(to bottom, $bg-color 64%, $bg-grey-light-color 64%);
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 780px;
+      padding: 25px 160px 50px;
+
+      background-image: linear-gradient(to bottom, $bg-color 58%, $bg-grey-light-color 58%);
+    }
+  }
+
+  &--fail {
+    top: 50%;
+
+    display: none;
+    width: 100%;
+
+    transform: translate(0, -50%);
+
+    @media (min-width: $screen-md) {
+      left: 50%;
+
+      width: 460px;
+      padding: 25px 70px 50px;
+
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  h2 {
+    margin-bottom: 26px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (min-width: $screen-md) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px 20px;
+
+    font-weight: bold;
+    font-size: 18px;
+    vertical-align: baseline;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: $success-color;
+    border: 1px solid transparent;
+    border-radius: $input-corner-border-radius;
+
+    @media (min-width: $screen-md) {
+      width: 296px;
+    }
+
+    &--padded {
+      margin-top: 65px;
+    }
+
+    &:hover {
+      background-color: darken($success-color, 3%);
+    }
+
+    &:active {
+      color: mix(darken(#ffffff, 10%), $success-color);
+    }
+
+    &:disabled {
+      background: $input-border-color;
+    }
+  }
+}
