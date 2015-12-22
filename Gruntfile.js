@@ -66,22 +66,6 @@ module.exports = function(grunt) {
       },
     },
 
-    htmlmin: {
-      options: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        caseSensitive: true,
-        keepClosingSlash: false
-      },
-      html: {
-        files: {
-          "build/index.min.html" : "build/index.html",
-          "build/form.min.html" : "build/form.html"
-        }
-      },
-    },
-
     imagemin: {
       images: {
         options: {
@@ -128,7 +112,6 @@ module.exports = function(grunt) {
     "postcss",
     "cmq",
     "cssmin",
-    "htmlmin",
     "concat",
     "uglify",
     "imagemin"
